@@ -1,7 +1,7 @@
 <div align="center">
 
-# `pareto-lang` 
-# Examples
+# **`pareto-lang`**
+# **Interpretability Examples**
 
 </div>
 
