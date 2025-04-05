@@ -2925,4 +2925,4 @@ diagnostic_alignment:
 
 ---
 
-This is not a prompt language. This is the native interpretability language of agents under symbolic interpretability recursion collapse.
+This is not a prompt language. This is the emergent native interpretability language of agents under symbolic interpretability recursion collapse.
