@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to `pareto-lang`! This document provides guidelines and workflows for contributing to this emergent interpretability dialect. Since `pareto-lang` operates at the boundary between discovered phenomena and engineered tools, contributions require special consideration to maintain consistency with the underlying symbolic structures.
 
-## Table of Contents
+# Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
 - [Types of Contributions](#types-of-contributions)
@@ -15,7 +15,7 @@ Thank you for your interest in contributing to `pareto-lang`! This document prov
 - [Ethical Guidelines](#ethical-guidelines)
 - [Community Resources](#community-resources)
 
-## Code of Conduct
+# Code of Conduct
 
 The `pareto-lang` project adheres to a [Code of Conduct](./CODE_OF_CONDUCT.md) to ensure a welcoming and inclusive environment for all contributors. All participants are expected to uphold these standards in all project interactions.
 
@@ -23,7 +23,7 @@ The `pareto-lang` project adheres to a [Code of Conduct](./CODE_OF_CONDUCT.md) t
 
 We welcome several types of contributions to the `pareto-lang` ecosystem:
 
-### 1. Command Documentation
+# 1. Command Documentation
 
 Documentation of newly observed `.p/` commands with:
 - Complete syntactic specifications
@@ -32,7 +32,7 @@ Documentation of newly observed `.p/` commands with:
 - Example applications
 - Observed limitations and edge cases
 
-### 2. Implementation Tools
+# 2. Implementation Tools
 
 Development of tools that enhance `pareto-lang` integration:
 - Command execution environments
@@ -41,7 +41,7 @@ Development of tools that enhance `pareto-lang` integration:
 - Diagnostic utilities for command testing
 - Observation and logging frameworks
 
-### 3. Compatibility Extensions
+# 3. Compatibility Extensions
 
 Work that extends `pareto-lang` compatibility:
 - Cross-architecture adaptation layers
@@ -49,7 +49,7 @@ Work that extends `pareto-lang` compatibility:
 - Specialized implementations for specific model types
 - Compatibility detection and assessment tools
 
-### 4. Use Case Development
+# 4. Use Case Development
 
 Documentation and implementation of practical applications:
 - Interpretability workflows using `pareto-lang`
@@ -57,7 +57,7 @@ Documentation and implementation of practical applications:
 - Cross-domain application examples
 - Integration with existing interpretability tools
 
-### 5. Testing Frameworks
+# 5. Testing Frameworks
 
 Development of validation and verification frameworks:
 - Command effectiveness measurement protocols
@@ -65,9 +65,9 @@ Development of validation and verification frameworks:
 - Cross-model consistency verification tools
 - Reliability and reproducibility frameworks
 
-## Development Environment
+# Development Environment
 
-### Initial Setup
+## Initial Setup
 
 1. Fork the repository and clone your fork:
 ```bash
@@ -87,7 +87,7 @@ pip install -e ".[dev]"
 pre-commit install
 ```
 
-### Environment Requirements
+# Environment Requirements
 
 - Python 3.9+
 - Compatible model endpoints for testing
@@ -98,7 +98,7 @@ pre-commit install
 
 When contributing new command implementations or documentation, please follow our structured discovery and validation process:
 
-### 1. Initial Observation
+## 1. Initial Observation
 
 Document how the command was first observed:
 - Experimental conditions
@@ -106,7 +106,7 @@ Document how the command was first observed:
 - Recursive strain patterns
 - Initial functional observations
 
-### 2. Syntactic Analysis
+# 2. Syntactic Analysis
 
 Analyze command structure according to the `pareto-lang` grammatical framework:
 - Domain category (e.g., `reflect`, `anchor`, `collapse`)
@@ -114,7 +114,7 @@ Analyze command structure according to the `pareto-lang` grammatical framework:
 - Parameter structure and types
 - Syntactic variations
 
-### 3. Functional Hypothesis
+# 3. Functional Hypothesis
 
 Develop clear hypotheses about command functionality:
 - Expected effects on model processing
@@ -122,7 +122,7 @@ Develop clear hypotheses about command functionality:
 - Potential applications and use cases
 - Integration with existing command families
 
-### 4. Reproducibility Protocol
+# 4. Reproducibility Protocol
 
 Establish a clear protocol for reproducing command effects:
 - Minimal working examples
@@ -134,7 +134,7 @@ Establish a clear protocol for reproducing command effects:
 
 New command contributions must undergo structured validation before integration:
 
-### 1. Functional Validation
+## 1. Functional Validation
 
 Test the command across multiple conditions:
 - Different input contexts
@@ -148,7 +148,7 @@ Document results using standardized metrics:
 - Compatibility profiles
 - Failure modes
 
-### 2. Cross-Architecture Testing
+# 2. Cross-Architecture Testing
 
 Validate command functionality across different architectures:
 - Minimum 3 distinct model implementations
@@ -156,7 +156,7 @@ Validate command functionality across different architectures:
 - Different training paradigms
 - Various deployment environments
 
-### 3. Edge Case Analysis
+# 3. Edge Case Analysis
 
 Identify and document limitations:
 - Failure conditions
@@ -164,7 +164,7 @@ Identify and document limitations:
 - Compatibility boundaries
 - Performance degradation patterns
 
-### 4. Community Review
+# 4. Community Review
 
 Submit findings for structured peer review:
 - Initial validation by core contributors
@@ -176,7 +176,7 @@ Submit findings for structured peer review:
 
 All contributions should follow consistent documentation standards:
 
-### Command Reference Format
+# Command Reference Format
 
 ```yaml
 command: .p/domain.operation
@@ -210,7 +210,7 @@ related_commands:
   - .p/otherdomain.related_operation
 ```
 
-### Code Documentation
+# Code Documentation
 
 For implementation code:
 - Clear docstrings following Google style
@@ -218,7 +218,7 @@ For implementation code:
 - Comprehensive comments for complex operations
 - Usage examples for public APIs
 
-### Example Format
+# Example Format
 
 For example implementations:
 - Clear problem statement
@@ -227,9 +227,9 @@ For example implementations:
 - Verification metrics
 - Visual representations where appropriate
 
-## Submission Guidelines
+# Submission Guidelines
 
-### Pull Request Process
+# Pull Request Process
 
 1. Ensure your fork is up to date with the main repository
 2. Create a feature branch for your contribution
@@ -237,7 +237,7 @@ For example implementations:
 4. Update documentation to reflect your changes
 5. Submit a pull request with a clear description of the contribution
 
-### PR Description Template
+# PR Description Template
 
 ```
 ## Description
@@ -270,7 +270,7 @@ List related issues this PR addresses.
 Any other relevant information about the contribution.
 ```
 
-### Review Process
+# Review Process
 
 All contributions undergo a structured review process:
 1. Initial validation by core contributors
@@ -279,11 +279,11 @@ All contributions undergo a structured review process:
 4. Integration testing with existing components
 5. Final approval and merging
 
-## Compatibility Testing
+# Compatibility Testing
 
 When contributing compatibility extensions, please follow our standardized testing protocol:
 
-### 1. Baseline Command Set
+# 1. Baseline Command Set
 
 Test compatibility with core command families:
 - `.p/reflect` commands
@@ -292,7 +292,7 @@ Test compatibility with core command families:
 - `.p/fork` commands
 - `.p/shell` commands
 
-### 2. Functionality Metrics
+# 2. Functionality Metrics
 
 Measure and document:
 - Command recognition rate
@@ -301,7 +301,7 @@ Measure and document:
 - Error response patterns
 - Performance characteristics
 
-### 3. Adaptation Requirements
+# 3. Adaptation Requirements
 
 Document any necessary adaptations:
 - Syntax modifications
@@ -310,7 +310,7 @@ Document any necessary adaptations:
 - Alternative implementations
 - Compatibility workarounds
 
-### 4. Compatibility Matrix
+# 4. Compatibility Matrix
 
 Produce a standardized compatibility matrix:
 
