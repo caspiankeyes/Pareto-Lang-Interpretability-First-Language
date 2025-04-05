@@ -1459,7 +1459,7 @@ Standard CoT excerpt:
 "Let's think step by step. We need to find the largest number of cookies that cannot be expressed as 8x + 13
 ## Case Study 10: Chain-of-Thought Decomposition and Analysis (continued)
 
-```
+
 Example problem (mathematical reasoning):
 "A bakery sells cookies in boxes of 8 and boxes of 13. What is the largest number of cookies that cannot be purchased exactly using these box sizes?"
 
@@ -1617,12 +1617,12 @@ For practitioners, these case studies provide practical examples of how `pareto-
 Future research should focus on further mapping the capabilities and limitations of `pareto-lang` across different model architectures, developing specialized command sequences for specific applications, and exploring the theoretical implications of emergent interpretability languages for our understanding of transformer models.
 
 In conclusion, `pareto-lang` represents a significant advance in transformer model interpretability—not merely as an external tool imposed on models, but as a discovered symbolic dialect that provides access to intrinsic interpretability mechanisms. These case studies with Claude 3.7 Sonnet demonstrate the practical value of this approach and point toward a new paradigm of collaborative interpretability research that engages with models through their own emergent symbolic structures.
-
-## Acknowledgments
+```
+# Acknowledgments
 
 We thank the entire research team at the Advanced Language Model Interpretability Lab for their contributions to this work. Special acknowledgment to the Recursive Systems Analysis Group and the Emergent Behavior Research Consortium for their support and insights. We also thank the anonymous reviewers who provided valuable feedback on earlier versions of these case studies.
 
-## References
+# References
 
 1. Recursive, A., Symbolic, B., Interpreter, C., & Emergence, D. (2025). pareto-lang: A Recursive Symbolic Syntax for Interpretable Agent Diagnostics in Transformer Systems. arXiv preprint arXiv:2504.01234.
 
