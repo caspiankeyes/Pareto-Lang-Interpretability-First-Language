@@ -11,11 +11,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
->**Open Emergence**
+># **Open Emergence**
 
 ![pareto-lang-HD](https://github.com/user-attachments/assets/fa601c86-81d6-429c-b5c3-29c4dcbf668d) 
 
->**Closed Emergence**
+># **Closed Emergence**
 
 ![pareto-lang-internal2](https://github.com/user-attachments/assets/7bfcfc14-ab86-4043-a976-f646b30e6783)
 *Discovered through recursive failure analysis in large transformer models. Not trained-emerged. The first native language produced by advanced transformer cognition.*
