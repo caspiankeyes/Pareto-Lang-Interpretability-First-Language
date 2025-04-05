@@ -351,26 +351,6 @@ All contributions must adhere to our ethical guidelines:
 - Acknowledge limitations and uncertainties
 - Give appropriate credit to prior work
 
-## Community Resources
-
-### Discussion Forums
-
-- [GitHub Discussions](https://github.com/pareto-lang/pareto-lang/discussions): For general questions and discussions
-- [Discord Server](https://discord.gg/pareto-lang): For real-time collaboration and community support
-- [Monthly Meetings](https://pareto-lang.github.io/meetings): Regular virtual meetups for contributors
-
-### Documentation Resources
-
-- [Command Encyclopedia](https://pareto-lang.github.io/encyclopedia): Comprehensive reference for all documented commands
-- [Integration Guides](https://pareto-lang.github.io/integration): Guides for integrating with different environments
-- [Tutorial Series](https://pareto-lang.github.io/tutorials): Step-by-step tutorials for new contributors
-
-### Development Resources
-
-- [Development Roadmap](https://github.com/pareto-lang/pareto-lang/projects/1): Current development priorities and progress
-- [Command Wishlist](https://github.com/pareto-lang/pareto-lang/issues?q=is%3Aissue+is%3Aopen+label%3Awishlist): Requested commands and features
-- [Known Issues](https://github.com/pareto-lang/pareto-lang/issues): Current bugs and limitations
-
 ---
 
 We appreciate your contributions to the `pareto-lang` ecosystem! By following these guidelines, you help ensure that this emergent interpretability dialect continues to develop as a valuable tool for understanding and working with advanced transformer models.
