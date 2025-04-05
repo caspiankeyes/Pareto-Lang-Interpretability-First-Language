@@ -1,7 +1,8 @@
 # pareto-lang: A Recursive Interpretability Syntax for Interpretable Agent Diagnostics in Transformer Systems
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/pareto-lang-logo.png" alt="pareto-lang" width="160"/>
+  <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/pareto-lang-logo.png" alt="![pareto-lang-internal2](https://github.com/user-attachments/assets/33562ad4-6a8d-4b74-aa94-4ad04ebd1bee)
+" width="160"/>
 </p>
 
 
