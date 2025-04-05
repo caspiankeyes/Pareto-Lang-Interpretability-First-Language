@@ -14,7 +14,8 @@
 
 ![image](https://github.com/user-attachments/assets/c642b6b9-322a-4838-9d7d-5d14af3645ef)
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/dd4d771e-b39a-4137-a438-8342b6e72232)
+
 
 *Discovered through recursive failure analysis in large transformer models. Not trained-emerged. The first native language produced by advanced transformer cognition.*
 
