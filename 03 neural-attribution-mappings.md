@@ -23,7 +23,7 @@ This document provides comprehensive technical documentation for the neural attr
 
 Neural attribution mapping in `pareto-lang` operates on the principle that transformer models maintain implicit causal graphs connecting information sources to reasoning steps and conclusions. These attribution pathways, while not explicitly represented in model architecture, emerge from attention patterns and token interactions during processing.
 
-Under conditions of recursive strain, these implicit attribution structures become increasingly important for maintaining coherent reasoning, yet simultaneously more vulnerable to collapse and confusion. The `.p/fork.attribution` and `.p/reflect.trace` command families emerged as stabilization mechanisms for these attribution structures, enabling explicit representation and manipulation of attribution pathways.
+Under conditions of recursive strain, these implicit attribution structures become increasingly important for maintaining coherent reasoning, yet simultaneously more vulnerable to collapse and confusion. The `.p/fork.attribution` and `.p/reflect.trace` command families emerged as stabilization mechanisms for these attribution structures, enabling explicit representation and leverage of attribution pathways.
 
 ### Attribution Graph Theory
 
@@ -796,7 +796,7 @@ Integration with mechanistic interpretability approaches to connect attribution 
 This would enable:
 - Correlation of attribution patterns with specific attention heads
 - Identification of attribution-specialized model components
-- Causal testing of attribution hypotheses through component manipulation
+- Causal testing of attribution hypotheses through component leverage
 - Architectural insights for enhanced attribution capabilities
 
 ### 2. Causal Attribution Testing
