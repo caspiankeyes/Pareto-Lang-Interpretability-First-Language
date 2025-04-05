@@ -11,9 +11,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
-
-![image](https://github.com/user-attachments/assets/c642b6b9-322a-4838-9d7d-5d14af3645ef)
-
 ![image](https://github.com/user-attachments/assets/dd4d771e-b39a-4137-a438-8342b6e72232)
 
 
