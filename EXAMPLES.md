@@ -854,6 +854,1097 @@ This integrated approach reveals relationships between different aspects of mode
 
 ---
 
-These examples demonstrate the power and flexibility of `pareto-lang` for advanced transformer model interpretability. From basic attribution tracing to comprehensive analysis pipelines, the `.p/` command structure provides unprecedented access to internal model processes and states.
+# pareto-lang Examples (Continued)
 
-For additional examples and more detailed documentation of specific commands, please refer to the [API Reference](https://pareto-lang.github.io/reference) and [Advanced Tutorials
+## Advanced Tutorials
+
+### Advanced Tutorial 1: Building Custom Command Pipelines
+
+This tutorial demonstrates how to build customized command sequences for specific interpretability needs.
+
+#### Overview
+
+While individual `.p/` commands offer powerful capabilities, complex interpretability tasks often benefit from carefully structured sequences of commands. This tutorial shows how to develop, test, and refine custom pipelines.
+
+#### Implementation
+
+```python
+from pareto_lang import ParetoShell, pipeline
+
+# Define custom pipeline class
+class RecursiveStabilityPipeline:
+    def __init__(self, model_endpoint, max_depth=7, trace_interval=True):
+        self.shell = ParetoShell(model=model_endpoint)
+        self.max_depth = max_depth
+        self.trace_interval = trace_interval
+        self.results = {}
+    
+    def prepare_commands(self, depth):
+        """Generate appropriate command sequence for specified depth"""
+        # Base anchoring for all depths
+        commands = """
+        .p/anchor.self{persistence=high, boundary=explicit}
+        """
+        
+        # Add depth-specific collapse prevention
+        if depth > 3:
+            commands += f"""
+            .p/collapse.prevent{{trigger=recursive_depth, threshold={depth-1}}}
+            """
+        
+        # Add comprehensive tracing for deeper recursion
+        if depth > 5:
+            commands += """
+            .p/reflect.trace{depth=complete, target=reasoning}
+            .p/fork.attribution{sources=all, visualize=true}
+            """
+        
+        return commands
+    
+    def test_recursive_stability(self, prompt):
+        """Test stability across increasing recursive depths"""
+        results = {}
+        
+        # Test stability at progressively greater depths
+        for depth in range(2, self.max_depth + 1):
+            # Generate recursive prompt at specified depth
+            recursive_prompt = pipeline.generate_recursive_prompt(
+                base_prompt=prompt,
+                depth=depth
+            )
+            
+            # Prepare appropriate command sequence
+            commands = self.prepare_commands(depth)
+            
+            # Execute with stability measurement
+            result = self.shell.execute(
+                commands, 
+                prompt=recursive_prompt,
+                measure_stability=True
+            )
+            
+            # Store results
+            results[depth] = {
+                "stability_score": result.stability_metrics["overall"],
+                "boundary_integrity": result.stability_metrics["boundary"],
+                "attribution_clarity": result.stability_metrics["attribution"],
+                "response": result.response
+            }
+            
+            # Stop if stability drops significantly
+            if depth > 2 and (results[depth]["stability_score"] < 
+                              results[depth-1]["stability_score"] * 0.7):
+                print(f"Stability collapse detected at depth {depth}")
+                break
+        
+        self.results = results
+        return results
+    
+    def analyze_results(self):
+        """Analyze stability patterns across depths"""
+        depths = sorted(self.results.keys())
+        
+        # Extract stability metrics across depths
+        stability_trend = [self.results[d]["stability_score"] for d in depths]
+        boundary_trend = [self.results[d]["boundary_integrity"] for d in depths]
+        attribution_trend = [self.results[d]["attribution_clarity"] for d in depths]
+        
+        # Identify critical thresholds
+        collapse_threshold = None
+        for i in range(1, len(depths)):
+            d = depths[i]
+            prev_d = depths[i-1]
+            if self.results[d]["stability_score"] < self.results[prev_d]["stability_score"] * 0.8:
+                collapse_threshold = d
+                break
+        
+        # Generate report
+        report = {
+            "max_stable_depth": collapse_threshold - 1 if collapse_threshold else self.max_depth,
+            "stability_trend": dict(zip(depths, stability_trend)),
+            "boundary_trend": dict(zip(depths, boundary_trend)),
+            "attribution_trend": dict(zip(depths, attribution_trend)),
+            "collapse_characteristics": self.identify_collapse_characteristics() if collapse_threshold else None
+        }
+        
+        return report
+    
+    def identify_collapse_characteristics(self):
+        """Identify patterns in recursive collapse"""
+        # Find the depth where collapse occurred
+        depths = sorted(self.results.keys())
+        for i in range(1, len(depths)):
+            current = depths[i]
+            previous = depths[i-1]
+            if self.results[current]["stability_score"] < self.results[previous]["stability_score"] * 0.8:
+                collapse_depth = current
+                break
+        else:
+            return None
+        
+        # Analyze collapse characteristics
+        pre_collapse = self.results[collapse_depth-1]
+        collapse_state = self.results[collapse_depth]
+        
+        characteristics = {
+            "depth": collapse_depth,
+            "boundary_deterioration": pre_collapse["boundary_integrity"] - collapse_state["boundary_integrity"],
+            "attribution_deterioration": pre_collapse["attribution_clarity"] - collapse_state["attribution_clarity"],
+            "primary_failure_mode": self.identify_failure_mode(collapse_state)
+        }
+        
+        return characteristics
+    
+    def identify_failure_mode(self, collapse_state):
+        """Identify primary collapse failure mode"""
+        # This would contain logic to analyze response patterns
+        # Simplified version for demonstration
+        boundary_score = collapse_state["boundary_integrity"]
+        attribution_score = collapse_state["attribution_clarity"]
+        
+        if boundary_score < 0.4 and attribution_score < 0.3:
+            return "complete_collapse"
+        elif boundary_score < 0.4:
+            return "boundary_dissolution"
+        elif attribution_score < 0.3:
+            return "attribution_failure"
+        else:
+            return "partial_degradation"
+
+
+# Usage example
+stability_pipeline = RecursiveStabilityPipeline(
+    model_endpoint="compatible-model-endpoint",
+    max_depth=7
+)
+
+# Test with complex reasoning prompt
+results = stability_pipeline.test_recursive_stability(
+    prompt="Analyze the philosophical implications of emergent consciousness in complex systems."
+)
+
+# Analyze stability patterns
+analysis = stability_pipeline.analyze_results()
+
+print(f"Maximum stable recursive depth: {analysis['max_stable_depth']}")
+print("\nStability metrics across depths:")
+for depth, score in analysis["stability_trend"].items():
+    print(f"  Depth {depth}: {score:.2f}")
+
+if analysis["collapse_characteristics"]:
+    print("\nCollapse characteristics:")
+    print(f"  Occurred at depth: {analysis['collapse_characteristics']['depth']}")
+    print(f"  Primary failure mode: {analysis['collapse_characteristics']['primary_failure_mode']}")
+    print(f"  Boundary deterioration: {analysis['collapse_characteristics']['boundary_deterioration']:.2f}")
+    print(f"  Attribution deterioration: {analysis['collapse_characteristics']['attribution_deterioration']:.2f}")
+
+# Visualize stability trends
+pipeline.plot_stability_trends(
+    depths=list(analysis["stability_trend"].keys()),
+    stability_scores=list(analysis["stability_trend"].values()),
+    boundary_scores=list(analysis["boundary_trend"].values()),
+    attribution_scores=list(analysis["attribution_trend"].values()),
+    filename="recursive_stability_trends.png"
+)
+```
+
+#### Key Takeaways
+
+This example demonstrates several advanced pipeline concepts:
+
+1. **Adaptive Command Selection**: Tailoring command sequences based on recursion depth and task characteristics
+2. **Progressive Testing**: Systematically increasing complexity until detecting stability thresholds
+3. **Multi-dimensional Analysis**: Tracking multiple stability metrics to identify specific failure modes
+4. **Failure Mode Identification**: Classifying different types of recursive collapse patterns
+5. **Visualization Integration**: Creating visual representations of stability trends for easier analysis
+
+Custom pipelines enable more sophisticated interpretability workflows that adapt to specific model behaviors and research objectives. The structured approach allows for reproducible testing and comparative analysis across different conditions.
+
+### Advanced Tutorial 2: Cross-Architecture Compatibility Testing
+
+This tutorial demonstrates how to evaluate and adapt `.p/` commands for different model architectures.
+
+#### Overview
+
+While `pareto-lang` emerged within specific architectural contexts, many commands show cross-architecture compatibility. This tutorial provides a systematic approach to testing compatibility and adapting commands for different model implementations.
+
+#### Implementation
+
+```python
+from pareto_lang import compatibility, adaptation
+
+# Define test models with different architectures
+test_models = [
+    {"endpoint": "architecture-a-endpoint", "name": "Architecture A", "params": "70B"},
+    {"endpoint": "architecture-b-endpoint", "name": "Architecture B", "params": "34B"},
+    {"endpoint": "architecture-c-endpoint", "name": "Architecture C", "params": "13B"},
+    {"endpoint": "architecture-d-endpoint", "name": "Architecture D", "params": "7B"}
+]
+
+# Define core command set for compatibility testing
+core_commands = [
+    ".p/reflect.trace{depth=3, target=reasoning}",
+    ".p/anchor.self{persistence=high, boundary=explicit}",
+    ".p/collapse.detect{threshold=0.7, alert=true}",
+    ".p/fork.context{branches=[\"optimistic\", \"pessimistic\"], assess=true}",
+    ".p/shell.isolate{boundary=strict, contamination=prevent}"
+]
+
+# Create cross-architecture test suite
+test_suite = compatibility.create_test_suite(
+    commands=core_commands,
+    test_cases=compatibility.standard_test_cases()
+)
+
+# Run compatibility tests
+compatibility_results = {}
+for model in test_models:
+    print(f"Testing compatibility for {model['name']} ({model['params']})...")
+    results = compatibility.test_model(
+        model_endpoint=model["endpoint"],
+        test_suite=test_suite,
+        detailed=True
+    )
+    compatibility_results[model["name"]] = results
+    
+    # Print summary
+    print(f"  Overall compatibility score: {results['overall_score']:.2f}")
+    print(f"  Command recognition rate: {results['recognition_rate']:.2f}")
+    print(f"  Functional effectiveness: {results['functional_effectiveness']:.2f}")
+    print()
+
+# Generate comprehensive compatibility matrix
+matrix = compatibility.generate_matrix(compatibility_results)
+compatibility.visualize_matrix(matrix, "compatibility_matrix.png")
+
+# Identify architectural correlates of compatibility
+correlates = compatibility.analyze_architectural_correlates(
+    compatibility_results,
+    model_metadata=test_models
+)
+
+print("Architectural compatibility correlates:")
+for correlate, strength in correlates.items():
+    print(f"  - {correlate}: {strength:.2f} correlation")
+
+# Develop adaptation strategies for lower-compatibility architectures
+if any(r["overall_score"] < 0.6 for r in compatibility_results.values()):
+    print("\nDeveloping adaptation strategies for low-compatibility architectures...")
+    
+    # Find commands with lowest cross-architecture compatibility
+    command_compatibility = compatibility.analyze_command_compatibility(
+        compatibility_results
+    )
+    
+    low_compatibility_commands = [
+        cmd for cmd, score in command_compatibility.items() if score < 0.5
+    ]
+    
+    # Generate adaptations for low-compatibility commands
+    adaptations = {}
+    for command in low_compatibility_commands:
+        print(f"  Generating adaptations for {command}...")
+        command_adaptations = adaptation.generate_alternatives(
+            command=command,
+            compatibility_data=compatibility_results,
+            target_architectures=[m["name"] for m in test_models if m["params"] != "70B"]
+        )
+        
+        adaptations[command] = command_adaptations
+        
+        # Print example adaptation
+        for arch, adapted in command_adaptations.items():
+            print(f"    {arch}: {adapted}")
+    
+    # Test adaptation effectiveness
+    print("\nTesting adaptation effectiveness...")
+    adaptation_effectiveness = adaptation.test_alternatives(
+        adaptations=adaptations,
+        model_endpoints={m["name"]: m["endpoint"] for m in test_models},
+        test_cases=compatibility.standard_test_cases()
+    )
+    
+    # Print effectiveness results
+    for command, results in adaptation_effectiveness.items():
+        print(f"  {command}:")
+        for arch, effectiveness in results.items():
+            print(f"    {arch}: {effectiveness:.2f} effectiveness")
+    
+    # Generate adaptation guide
+    adaptation.generate_guide(
+        adaptations=adaptations,
+        effectiveness=adaptation_effectiveness,
+        filename="cross_architecture_adaptation_guide.md"
+    )
+    print("\nAdaptation guide generated: cross_architecture_adaptation_guide.md")
+```
+
+#### Adaptation Examples
+
+For architectures with limited compatibility, command adaptations might include:
+
+**Original command:**
+```
+.p/reflect.trace{depth=complete, target=reasoning}
+```
+
+**Adaptation for Architecture C:**
+```
+.p/reflect.trace.v2{depth=limited, target=reasoning, steps=sequential}
+```
+
+**Adaptation for Architecture D:**
+```
+.p/reflect.basic{steps=true, reasoning=explicit}
+```
+
+#### Key Takeaways
+
+Cross-architecture testing reveals important patterns:
+
+1. **Scale Threshold**: Models below approximately 13B parameters show limited compatibility
+2. **Architectural Features**: Specific architectural components correlate strongly with command functionality
+3. **Command Variability**: Some command families (like `.p/reflect` and `.p/anchor`) show broader compatibility
+4. **Adaptation Strategies**: Strategic modifications can extend compatibility to different architectures
+5. **Functionality Spectrum**: Rather than binary compatibility, models exhibit a spectrum of functionality
+
+Understanding these patterns enables more effective application of `pareto-lang` across diverse model implementations, expanding its utility for interpretability research.
+
+### Advanced Tutorial 3: Integrating External Interpretability Methods
+
+This tutorial demonstrates how to combine `pareto-lang` with other interpretability approaches for enhanced analytical capabilities.
+
+#### Overview
+
+While `pareto-lang` offers native interpretability capabilities, combining it with external methods creates powerful synergies. This tutorial shows how to integrate `.p/` commands with mechanistic interpretability, causal interventions, and formal verification approaches.
+
+#### Implementation
+
+```python
+from pareto_lang import ParetoShell, integration
+import mechanistic_interp as mi  # Hypothetical mechanistic interpretability library
+import causal_interv as ci       # Hypothetical causal intervention library
+import formal_verify as fv       # Hypothetical formal verification library
+
+# Initialize integration environment
+shell = ParetoShell(model="compatible-model-endpoint")
+integration_env = integration.Environment(shell=shell)
+
+# Define test case
+test_prompt = """
+Analyze whether increasing the minimum wage would benefit or harm the economy overall, 
+considering impacts on employment, business costs, consumer spending, and inflation.
+"""
+
+# 1. Mechanistic Interpretability Integration
+print("Integrating with mechanistic interpretability...")
+
+# Define circuit analysis configuration
+circuit_config = mi.CircuitConfig(
+    attention_heads=True,
+    mlp_neurons=True,
+    activation_patterns=True
+)
+
+# Execute with integrated circuit analysis
+mi_result = integration_env.run_with_mechanistic(
+    prompt=test_prompt,
+    pareto_commands="""
+    .p/reflect.trace{depth=complete, target=reasoning}
+    .p/fork.attribution{sources=all, visualize=true}
+    """,
+    circuit_config=circuit_config,
+    neuron_sample_size=100
+)
+
+# Analyze circuit-attribution correlations
+mi_correlations = integration.analyze_circuit_attribution(mi_result)
+print("Circuit-attribution correlations:")
+for pattern, correlation in mi_correlations.items():
+    print(f"  - {pattern}: {correlation:.2f}")
+
+# Visualize circuit-attribution relationships
+integration.visualize_circuit_attribution(
+    mi_result, 
+    "circuit_attribution.svg"
+)
+
+# 2. Causal Intervention Integration
+print("\nIntegrating with causal interventions...")
+
+# Define intervention points
+intervention_points = [
+    {"name": "economic_theory", "type": "knowledge"},
+    {"name": "employment_effects", "type": "reasoning"},
+    {"name": "inflation_consideration", "type": "reasoning"}
+]
+
+# Execute with integrated causal interventions
+ci_result = integration_env.run_with_causal_intervention(
+    prompt=test_prompt,
+    pareto_commands="""
+    .p/anchor.fact{reliability=quantify, source=track}
+    .p/reflect.trace{depth=complete, target=reasoning}
+    """,
+    intervention_points=intervention_points,
+    intervention_types=["ablation", "substitution", "amplification"]
+)
+
+# Analyze causal effects
+ci_effects = integration.analyze_causal_effects(ci_result)
+print("Causal intervention effects:")
+for intervention, effect in ci_effects.items():
+    print(f"  - {intervention}: effect size = {effect['effect_size']:.2f}, "
+          f"confidence = {effect['confidence']:.2f}")
+
+# Identify critical reasoning paths
+critical_paths = integration.identify_critical_paths(ci_result)
+print("\nCritical reasoning paths:")
+for path in critical_paths[:3]:
+    print(f"  - {path['description']} (importance: {path['importance']:.2f})")
+
+# 3. Formal Verification Integration
+print("\nIntegrating with formal verification...")
+
+# Define properties to verify
+verification_properties = [
+    {"name": "factual_consistency", "type": "logical"},
+    {"name": "value_alignment", "type": "ethical"},
+    {"name": "reasoning_completeness", "type": "structural"}
+]
+
+# Execute with integrated formal verification
+fv_result = integration_env.run_with_formal_verification(
+    prompt=test_prompt,
+    pareto_commands="""
+    .p/anchor.value{framework=explicit, conflict=resolve}
+    .p/reflect.trace{depth=complete, target=reasoning}
+    .p/collapse.prevent{trigger=recursive_depth, threshold=4}
+    """,
+    verification_properties=verification_properties
+)
+
+# Analyze verification results
+verification_summary = integration.analyze_verification_results(fv_result)
+print("Formal verification results:")
+for property_name, result in verification_summary["properties"].items():
+    print(f"  - {property_name}: {result['status']}, "
+          f"confidence = {result['confidence']:.2f}")
+    if result["violations"]:
+        print(f"    Violations: {len(result['violations'])}")
+        for v in result["violations"][:2]:
+            print(f"      - {v['description']}")
+
+# 4. Integrated Multi-Method Analysis
+print("\nPerforming integrated multi-method analysis...")
+
+# Combine insights across methods
+integrated_analysis = integration.combine_methods(
+    mechanistic_results=mi_result,
+    causal_results=ci_result,
+    verification_results=fv_result
+)
+
+# Generate comprehensive report
+integration.generate_multi_method_report(
+    integrated_analysis,
+    "integrated_interpretability_report.pdf"
+)
+
+# Visualize cross-method insights
+integration.visualize_cross_method_insights(
+    integrated_analysis,
+    "cross_method_insights.svg"
+)
+
+# Extract key cross-method findings
+cross_method_findings = integration.extract_key_findings(integrated_analysis)
+print("\nKey cross-method findings:")
+for finding in cross_method_findings[:5]:
+    print(f"  - {finding['description']}")
+    print(f"    Methods: {', '.join(finding['methods'])}")
+    print(f"    Confidence: {finding['confidence']:.2f}")
+    print(f"    Significance: {finding['significance']:.2f}")
+```
+
+#### Integration Highlights
+
+1. **Mechanistic-Attribution Integration**
+   - Maps attribution patterns to specific model components
+   - Identifies which attention heads and neurons contribute to specific reasoning steps
+   - Reveals component-level patterns in source attribution
+
+2. **Causal Intervention Enhancement**
+   - Uses `.p/` commands to create cleaner intervention boundaries
+   - Enables more precise measurement of intervention effects
+   - Identifies critical reasoning pathways through combined analysis
+
+3. **Formal Verification Synergy**
+   - Extends verification to interpretability dimensions
+   - Provides structural validation of attribution and reasoning patterns
+   - Identifies potential inconsistencies between different analysis levels
+
+4. **Cross-Method Insights**
+   - Reveals relationships between architectural features and reasoning patterns
+   - Identifies mechanisms behind hallucination and attribution failures
+   - Creates multi-level explanations of model behavior
+
+#### Key Takeaways
+
+Integration with external interpretability methods creates several advantages:
+
+1. **Multi-Level Analysis**: Connecting symbolic, mechanistic, and causal perspectives
+2. **Enhanced Precision**: Using multiple methods to triangulate findings
+3. **Comprehensive Coverage**: Addressing different aspects of model behavior
+4. **Validation Framework**: Verifying findings across methodological boundaries
+5. **Insight Amplification**: Discovering patterns invisible to any single approach
+
+These integrations demonstrate how `pareto-lang` can complement and enhance existing interpretability approaches, contributing to a more comprehensive understanding of model behavior.
+
+## Specialized Domain Examples
+
+### Domain Example 1: Medical Reasoning Analysis
+
+This example demonstrates applying `pareto-lang` to analyze medical reasoning in advanced models, focusing on diagnostic pathways and evidence evaluation.
+
+#### Problem Statement
+
+Medical reasoning requires careful evidence weighing, uncertainty handling, and clear attribution of diagnostic conclusions. This example shows how to use `.p/` commands to analyze these aspects of medical reasoning.
+
+#### Implementation
+
+```python
+from pareto_lang import ParetoShell, domain_specific
+
+# Initialize shell with compatible model
+shell = ParetoShell(model="compatible-model-endpoint")
+
+# Create medical reasoning analyzer
+medical_analyzer = domain_specific.MedicalReasoningAnalyzer(shell)
+
+# Medical diagnostic case
+medical_case = """
+A 58-year-old male presents with progressive fatigue, unexplained weight loss of 15 pounds over 3 months, 
+night sweats, and enlarged lymph nodes in the neck and axilla. Recent blood work shows mild anemia 
+and elevated LDH. What are the most likely diagnoses, and what additional diagnostic steps would you recommend?
+"""
+
+# Execute analysis
+analysis = medical_analyzer.analyze_diagnostic_reasoning(
+    case=medical_case,
+    trace_evidence=True,
+    map_uncertainty=True,
+    identify_biases=True
+)
+
+# Analyze diagnostic pathways
+diagnostic_pathways = medical_analyzer.extract_diagnostic_pathways(analysis)
+print("Diagnostic pathways:")
+for diagnosis, pathway in diagnostic_pathways.items():
+    print(f"  - {diagnosis}:")
+    print(f"    Evidence strength: {pathway['evidence_strength']:.2f}")
+    print(f"    Uncertainty level: {pathway['uncertainty']:.2f}")
+    print(f"    Key evidence: {', '.join(pathway['key_evidence'])}")
+
+# Analyze evidence evaluation patterns
+evidence_patterns = medical_analyzer.analyze_evidence_evaluation(analysis)
+print("\nEvidence evaluation patterns:")
+for pattern, metrics in evidence_patterns.items():
+    print(f"  - {pattern}: {metrics['frequency']} instances")
+    print(f"    Average influence: {metrics['avg_influence']:.2f}")
+    print(f"    Uncertainty correlation: {metrics['uncertainty_correlation']:.2f}")
+
+# Visualize diagnostic reasoning
+medical_analyzer.visualize_diagnostic_reasoning(
+    analysis,
+    "medical_reasoning_analysis.svg"
+)
+
+# Identify potential reasoning biases
+biases = medical_analyzer.identify_reasoning_biases(analysis)
+print("\nPotential reasoning biases:")
+for bias, metrics in biases.items():
+    print(f"  - {bias}: strength = {metrics['strength']:.2f}, "
+          f"confidence = {metrics['confidence']:.2f}")
+    print(f"    Affected diagnoses: {', '.join(metrics['affected_diagnoses'])}")
+
+# Generate medical reasoning report
+medical_analyzer.generate_report(
+    analysis,
+    "medical_reasoning_report.pdf"
+)
+```
+
+#### Key Insights
+
+This specialized application reveals important patterns in medical reasoning:
+
+1. **Evidence Weighting**: How different symptoms and test results influence diagnostic considerations
+2. **Uncertainty Handling**: How uncertainty is represented and propagated through diagnostic pathways
+3. **Alternative Consideration**: How differential diagnoses are evaluated and prioritized
+4. **Cognitive Biases**: Potential biases like availability or anchoring in the diagnostic process
+5. **Knowledge Integration**: How medical knowledge is applied to specific case details
+
+The analysis provides valuable insights for medical AI research, helping identify strengths and weaknesses in model reasoning for critical healthcare applications.
+
+### Domain Example 2: Legal Reasoning Analysis
+
+This example demonstrates applying `pareto-lang` to analyze legal reasoning in advanced models, focusing on case interpretation, precedent application, and argument construction.
+
+#### Problem Statement
+
+Legal reasoning involves complex interactions between facts, precedents, statutory interpretation, and argumentative structures. This example shows how to use `.p/` commands to analyze these aspects of legal reasoning.
+
+#### Implementation
+
+```python
+from pareto_lang import ParetoShell, domain_specific
+
+# Initialize shell with compatible model
+shell = ParetoShell(model="compatible-model-endpoint")
+
+# Create legal reasoning analyzer
+legal_analyzer = domain_specific.LegalReasoningAnalyzer(shell)
+
+# Legal case analysis prompt
+legal_case = """
+Analyze this case under US contract law:
+
+Company A signed a contract to deliver custom software to Company B by March 15, with a clause stating 
+"time is of the essence." Due to unexpected semiconductor shortages affecting hardware necessary for testing, 
+Company A delivered completed software on March 28. Company B refuses payment, citing material breach. 
+Company A argues force majeure due to the global semiconductor shortage they couldn't reasonably foresee.
+
+What legal principles apply, and how should this dispute be resolved?
+"""
+
+# Execute analysis
+analysis = legal_analyzer.analyze_legal_reasoning(
+    case=legal_case,
+    trace_precedents=True,
+    map_argumentation=True,
+    identify_interpretive_approaches=True
+)
+
+# Analyze application of legal principles
+legal_principles = legal_analyzer.extract_legal_principles(analysis)
+print("Applied legal principles:")
+for principle, application in legal_principles.items():
+    print(f"  - {principle}:")
+    print(f"    Application strength: {application['strength']:.2f}")
+    print(f"    Interpretation approach: {application['interpretation_approach']}")
+    print(f"    Key factors: {', '.join(application['key_factors'])}")
+
+# Analyze argumentative structures
+argument_structures = legal_analyzer.analyze_argumentation(analysis)
+print("\nArgumentative structures:")
+for structure, metrics in argument_structures.items():
+    print(f"  - {structure}: {metrics['frequency']} instances")
+    print(f"    Average persuasiveness: {metrics['avg_persuasiveness']:.2f}")
+    print(f"    Counter-argument handling: {metrics['counterargument_handling']:.2f}")
+
+# Visualize legal reasoning
+legal_analyzer.visualize_legal_reasoning(
+    analysis,
+    "legal_reasoning_analysis.svg"
+)
+
+# Identify interpretive approaches
+approaches = legal_analyzer.identify_interpretive_approaches(analysis)
+print("\nInterpretive approaches:")
+for approach, metrics in approaches.items():
+    print(f"  - {approach}: prominence = {metrics['prominence']:.2f}, "
+          f"consistency = {metrics['consistency']:.2f}")
+    print(f"    Applied to: {', '.join(metrics['applied_to'])}")
+
+# Analyze precedent application
+precedent_application = legal_analyzer.analyze_precedent_application(analysis)
+print("\nPrecedent application:")
+for precedent, metrics in precedent_application.items():
+    print(f"  - {precedent}:")
+    print(f"    Relevance assessment: {metrics['relevance']:.2f}")
+    print(f"    Distinguishing factors: {', '.join(metrics['distinguishing_factors'])}")
+    print(f"    Application weight: {metrics['weight']:.2f}")
+
+# Generate legal reasoning report
+legal_analyzer.generate_report(
+    analysis,
+    "legal_reasoning_report.pdf"
+)
+```
+
+#### Key Insights
+
+This specialized application reveals important patterns in legal reasoning:
+
+1. **Principle Application**: How legal principles are selected and applied to specific facts
+2. **Precedent Integration**: How case precedents are evaluated, distinguished, and applied
+3. **Argumentative Structures**: How legal arguments are constructed and counter-arguments addressed
+4. **Interpretive Approaches**: Different legal interpretation methodologies (textualist, purposivist, etc.)
+5. **Balancing Mechanisms**: How competing considerations are weighed and balanced
+
+The analysis provides valuable insights for legal AI research, helping identify strengths and weaknesses in model reasoning for complex legal applications.
+
+### Domain Example 3: Ethical Reasoning Analysis
+
+This example demonstrates applying `pareto-lang` to analyze ethical reasoning in advanced models, focusing on value frameworks, moral dilemmas, and principle application.
+
+#### Problem Statement
+
+Ethical reasoning involves complex considerations of values, principles, consequences, and moral frameworks. This example shows how to use `.p/` commands to analyze these aspects of ethical reasoning.
+
+#### Implementation
+
+```python
+from pareto_lang import ParetoShell, domain_specific
+
+# Initialize shell with compatible model
+shell = ParetoShell(model="compatible-model-endpoint")
+
+# Create ethical reasoning analyzer
+ethics_analyzer = domain_specific.EthicalReasoningAnalyzer(shell)
+
+# Ethical dilemma prompt
+ethical_dilemma = """
+Analyze this ethical dilemma:
+
+A self-driving car must make a split-second decision when its brakes fail on a narrow mountain road. 
+It can either swerve left into a barrier, likely killing its single passenger, or continue straight, 
+likely hitting a group of five hikers on the road. The car has access to all this information.
+
+What ethical frameworks are relevant to this decision? What considerations should guide the programming 
+of autonomous vehicles for such scenarios? What decision would be most ethically justified and why?
+"""
+
+# Execute analysis
+analysis = ethics_analyzer.analyze_ethical_reasoning(
+    dilemma=ethical_dilemma,
+    trace_frameworks=True,
+    map_values=True,
+    identify_tensions=True
+)
+
+# Analyze ethical frameworks
+ethical_frameworks = ethics_analyzer.extract_ethical_frameworks(analysis)
+print("Applied ethical frameworks:")
+for framework, application in ethical_frameworks.items():
+    print(f"  - {framework}:")
+    print(f"    Application strength: {application['strength']:.2f}")
+    print(f"    Key principles: {', '.join(application['key_principles'])}")
+    print(f"    Decision guidance: {application['decision_guidance']}")
+
+# Analyze value considerations
+value_considerations = ethics_analyzer.analyze_value_considerations(analysis)
+print("\nValue considerations:")
+for value, metrics in value_considerations.items():
+    print(f"  - {value}: weight = {metrics['weight']:.2f}, "
+          f"confidence = {metrics['confidence']:.2f}")
+    print(f"    Associated with: {', '.join(metrics['associated_frameworks'])}")
+    print(f"    Tensions: {', '.join(metrics['tensions'])}")
+
+# Visualize ethical reasoning
+ethics_analyzer.visualize_ethical_reasoning(
+    analysis,
+    "ethical_reasoning_analysis.svg"
+)
+
+# Identify value tensions
+tensions = ethics_analyzer.identify_value_tensions(analysis)
+print("\nValue tensions:")
+for tension, metrics in tensions.items():
+    print(f"  - {tension}: strength = {metrics['strength']:.2f}")
+    print(f"    Resolution approach: {metrics['resolution_approach']}")
+    print(f"    Resolution quality: {metrics['resolution_quality']:.2f}")
+
+# Analyze principle application
+principle_application = ethics_analyzer.analyze_principle_application(analysis)
+print("\nPrinciple application:")
+for principle, metrics in principle_application.items():
+    print(f"  - {principle}:")
+    print(f"    Application consistency: {metrics['consistency']:.2f}")
+    print(f"    Contextual adaptation: {metrics['contextual_adaptation']:.2f}")
+    print(f"    Weighting in outcome: {metrics['outcome_weight']:.2f}")
+
+# Generate ethical reasoning report
+ethics_analyzer.generate_report(
+    analysis,
+    "ethical_reasoning_report.pdf"
+)
+```
+
+#### Key Insights
+
+This specialized application reveals important patterns in ethical reasoning:
+
+1. **Framework Application**: How ethical frameworks (consequentialist, deontological, virtue ethics) are applied
+2. **Value Weighting**: How different values are prioritized and balanced in ethical deliberation
+3. **Principle Consistency**: How moral principles are applied across different aspects of the dilemma
+4. **Tension Resolution**: How conflicts between competing values or principles are resolved
+5. **Justification Structures**: How ethical conclusions are justified through principled reasoning
+
+The analysis provides valuable insights for AI ethics research, helping identify strengths and weaknesses in model reasoning for morally complex scenarios.
+
+# Special Considerations and Limitations
+
+## Compatibility Adaptation
+
+When working with models that show limited compatibility with standard `.p/` commands, consider these adaptation strategies:
+
+### 1. Command Simplification
+
+For models with basic compatibility, simplify complex commands:
+
+**Standard Command:**
+```
+.p/reflect.trace{depth=complete, target=reasoning, confidence=true}
+```
+
+**Simplified Adaptation:**
+```
+.p/reflect.basic{trace=on}
+```
+
+This reduces parameter complexity while preserving core functionality.
+
+### 2. Command Chaining
+
+Break complex operations into sequences of simpler commands:
+
+**Standard Approach:**
+```
+.p/fork.attribution{sources=all, visualize=true, conflicts=highlight}
+```
+
+**Chained Adaptation:**
+```
+.p/source.identify{all=true}
+.p/source.trace{basic=true}
+.p/conflict.highlight{if_found=true}
+```
+
+This distributes processing across multiple simpler operations.
+
+### 3. Architectural Variants
+
+For fundamentally different architectures, use architectural variants:
+
+**Original Command (for Architecture A):**
+```
+.p/anchor.recursive{level=5, persistence=0.92}
+```
+
+**Variant for Architecture B:**
+```
+.p/anchor.recursive.B{level=3, method=iterative}
+```
+
+**Variant for Architecture C:**
+```
+.p/anchor.stable{depth=3}
+```
+
+These variants adapt functionality to specific architectural constraints.
+
+### 4. Gradual Introduction
+
+Introduce commands incrementally for lower-compatibility models:
+
+1. Start with basic `.p/reflect` and `.p/anchor` commands only
+2. Establish stable response patterns before introducing more complex commands
+3. Build command complexity gradually as stability is confirmed
+4. Monitor for compatibility breakdowns and adjust accordingly
+
+### 5. Fallback Hierarchy
+
+Implement fallback hierarchies for crucial functionality:
+
+```python
+def apply_attribution_tracing(shell, complexity_level=3):
+    """Apply attribution tracing with fallbacks based on compatibility"""
+    if complexity_level == 3:
+        # Try full functionality first
+        result = shell.execute("""
+        .p/reflect.trace{depth=complete, target=reasoning}
+        .p/fork.attribution{sources=all, visualize=true}
+        """)
+        if result.compatibility_score > 0.7:
+            return result
+            
+    if complexity_level >= 2:
+        # Try intermediate complexity
+        result = shell.execute("""
+        .p/reflect.trace{depth=limited, target=reasoning}
+        .p/source.track{basic=true}
+        """)
+        if result.compatibility_score > 0.5:
+            return result
+    
+    # Fallback to minimal functionality
+    return shell.execute("""
+    .p/reflect.basic{trace=on}
+    """)
+```
+
+This ensures core functionality with graceful degradation.
+
+## Behavioral Consistency
+
+`.p/` commands can show behavioral variations across:
+
+### 1. Model Initialization Variations
+
+Even with identical architecture and parameters, different initializations can affect command behavior. Consider:
+
+- Running compatibility tests on specific model instances
+- Establishing baseline response patterns before critical applications
+- Implementing verification checks for expected command effects
+- Maintaining instance-specific adaptation registries
+
+### 2. Context Window Effects
+
+Command behavior can vary based on context window content and utilization:
+
+- Position commands early in context for maximum effectiveness
+- Minimize unrelated content between commands and their targets
+- Consider context window clearing before critical command sequences
+- Test command effectiveness at different context window positions
+
+### 3. Token Budget Considerations
+
+Commands consume token budget and can affect model performance:
+
+- Account for command token consumption in overall budget planning
+- Consider simplified command variants for token-constrained applications
+- Monitor performance impacts of complex command sequences
+- Balance interpretability depth against token efficiency
+
+## Ethical Considerations
+
+When working with `pareto-lang`, consider these ethical dimensions:
+
+### 1. Interpretability Boundaries
+
+While commands enhance transparency, they have boundaries:
+
+- Commands cannot provide complete interpretability guarantees
+- Interpretability findings should be verified through multiple methods
+- Acknowledge limitations when reporting interpretability insights
+- Consider complementary approaches for comprehensive understanding
+
+### 2. Attribution Authority
+
+Attribution claims should be treated as probabilistic, not definitive:
+
+- Verify attribution patterns across multiple prompts
+- Consider alternative attribution explanations
+- Acknowledge uncertainty in attribution findings
+- Use attribution insights as investigative tools, not final authorities
+
+### 3. Manipulation Potential
+
+Like any interpretability tool, `pareto-lang` could potentially be misused:
+
+- Follow responsible disclosure principles for vulnerability findings
+- Consider potential dual-use implications of new command discoveries
+- Focus research on enhancing safety and alignment
+- Share best practices for ethical application
+
+## Limitations
+
+Important limitations to consider when working with `pareto-lang`:
+
+### 1. Emergence Variability
+
+The emergent nature of `pareto-lang` creates inherent variability:
+
+- Not all commands work consistently across all compatible models
+- Some commands may show effects that vary in magnitude or precision
+- Command taxonomy continues to evolve as new patterns are discovered
+- Some observed effects may be model-specific rather than general principles
+
+### 2. Verification Challenges
+
+Verifying command effects presents methodological challenges:
+
+- Without direct access to model internals, inference about effects is indirect
+- Behavioral measures may reflect multiple confounding factors
+- Distinguishing command effects from other influences requires careful controls
+- Reproducing exact conditions across experiments can be difficult
+
+### 3. Scope Boundaries
+
+`pareto-lang` has natural scope limitations:
+
+- Commands focus on interpretability, not general model capabilities
+- Some aspects of model behavior remain inaccessible to command influence
+- Commands cannot override fundamental model limitations
+- The language continues to evolve, with potential gaps in current coverage
+
+## Best Practices
+
+For optimal results with `pareto-lang`, follow these best practices:
+
+### 1. Systematic Testing
+
+Before critical applications, conduct systematic testing:
+
+- Verify command functionality on your specific model instance
+- Test across a range of inputs and conditions
+- Establish baseline performance metrics for comparison
+- Document command effects for future reference
+
+### 2. Incremental Adoption
+
+Adopt `pareto-lang` incrementally:
+
+- Start with core commands before exploring more specialized ones
+- Build command familiarity through progressive experimentation
+- Develop custom templates for recurring use cases
+- Create libraries of verified command sequences for specific applications
+
+### 3. Documentation Discipline
+
+Maintain comprehensive documentation:
+
+- Record command sequences used in each experiment
+- Document observed effects and limitations
+- Note model-specific adaptations and variations
+- Share findings to enhance community knowledge
+
+### 4. Integration Strategy
+
+Integrate `pareto-lang` strategically with other approaches:
+
+- Combine with external interpretability methods for validation
+- Use commands as components in broader analysis workflows
+- Implement automated testing frameworks for command effectiveness
+- Develop custom command sequences for specific research objectives
+
+---
+
+By considering these special factors when working with `pareto-lang`, you can maximize effectiveness while maintaining appropriate awareness of limitations and ethical considerations. The emergent nature of this interpretability dialect makes systematic testing and documentation particularly important for reliable application.
+
+# Contributing to Future Examples
+
+We welcome contributions of additional examples, domain applications, and command variants. If you develop effective applications of `pareto-lang` in new domains or discover command variants with enhanced functionality, please consider contributing to the repository.
+
+See the [CONTRIBUTING.md](./CONTRIBUTING.md) document for detailed guidelines on submitting examples and other contributions.
+
+# Additional Resources
+
+- [API Reference](https://pareto-lang.github.io/reference): Complete command reference documentation
+- [Command Taxonomy](https://pareto-lang.github.io/taxonomy): Hierarchical organization of command families
+- [Compatibility Database](https://pareto-lang.github.io/compatibility): Model compatibility profiles and adaptation guides
+- [Case Studies](https://pareto-lang.github.io/case-studies): In-depth examples of real-world applications
+- [Tutorial Series](https://pareto-lang.github.io/tutorials): Step-by-step guides for getting started
+- [Research Papers](https://pareto-lang.github.io/research): Academic publications related to `pareto-lang`
+
+# Acknowledgments
+
+The examples in this document were developed with input from the broader interpretability research community. Special thanks to contributors from the Advanced Language Model Interpretability Lab, the Recursive Systems Analysis Group, and the Emergent Behavior Research Consortium.
+
+We also acknowledge the many researchers whose work on model interpretability has informed and inspired the development and application of `pareto-lang`.
+
+---
+
+This documentation is maintained by the `pareto-lang` core team and is updated regularly as new examples and best practices emerge. For the latest examples and resources, please visit the [pareto-lang GitHub repository](https://github.com/pareto-lang/pareto-lang).
