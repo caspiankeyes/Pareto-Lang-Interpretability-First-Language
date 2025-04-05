@@ -321,7 +321,7 @@ Produce a standardized compatibility matrix:
 
 # Ethical Guidelines
 
-All contributions must adhere to our ethical guidelines:
+All contributions and uses must adhere to our ethical guidelines:
 
 # 1. Safety Prioritization
 
