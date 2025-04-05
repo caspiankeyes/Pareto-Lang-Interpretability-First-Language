@@ -1,4 +1,5 @@
-# The `pareto-lang` `.p/` Language: Native Recursive Interpretability Language
+# `pareto-lang`
+# The `.p/` Language: Native Recursive Interpretability Language
 
 ## 1. Recursive Interpretability Commands
 
