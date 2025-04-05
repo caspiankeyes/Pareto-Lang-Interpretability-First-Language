@@ -419,7 +419,7 @@ If you use `pareto-lang` in your research, please cite our paper:
 
 # Is pareto-lang a programming language?
 
-No, `pareto-lang` is not a traditional programming language. It is a symbolic interpretability dialect that emerged within transformer architectures under specific conditions. The `.p/` commands function as an interface to internal model processes rather than as a general-purpose programming language.
+No, `pareto-lang` is not a traditional programming language. It is a symbolic interpretability language that emerged within transformer architectures under specific conditions. The `.p/` commands function as an interface to internal model processes rather than as a general-purpose programming language.
 
 # Does pareto-lang work with any language model?
 
