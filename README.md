@@ -52,7 +52,7 @@ This repository provides tools, documentation, and examples for working with `pa
 - **Operational Effects**: Commands influence model processing for controlled experiments
 - **Cross-Architecture Compatibility**: Works with multiple advanced transformer implementations
 
-# Why pareto-lang matters
+# Why `pareto-lang` matters
 
 Traditional interpretability approaches treat advanced models as black boxes, analyzing behavior from the outside. `pareto-lang` offers a fundamentally different approach—an interpretability language that operates within the model's native representational space, providing direct access to internal processes.
 
