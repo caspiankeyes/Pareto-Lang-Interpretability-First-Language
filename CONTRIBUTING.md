@@ -319,32 +319,32 @@ Produce a standardized compatibility matrix:
 | .p/reflect     | ✓ reflect.trace   | ⚠️ reflect.agent      | ❌ reflect.meta  |
 | .p/anchor      | ✓ anchor.self     | ⚠️ anchor.context     | ❌ anchor.complex |
 
-## Ethical Guidelines
+# Ethical Guidelines
 
 All contributions must adhere to our ethical guidelines:
 
-### 1. Safety Prioritization
+# 1. Safety Prioritization
 
 - Contributions must prioritize model safety and alignment
 - Command implementations should not enable harmful behaviors
 - Safety implications must be explicitly documented
 - Potential risks should be identified and mitigated
 
-### 2. Transparency
+# 2. Transparency
 
 - Clear documentation of all command effects
 - Explicit recognition of limitations and uncertainties
 - Open discussion of potential misuse scenarios
 - Complete disclosure of compatibility constraints
 
-### 3. Responsible Development
+# 3. Responsible Development
 
 - Test contributions for unintended consequences
 - Consider diverse user needs and contexts
 - Address potential bias in implementations
 - Design for appropriate accessibility and usability
 
-### 4. Research Integrity
+# 4. Research Integrity
 
 - Accurately document command discovery processes
 - Provide evidence for effectiveness claims
