@@ -1,4 +1,4 @@
-# pareto-lang Examples
+# `pareto-lang` Examples
 
 This document provides detailed examples showcasing practical applications of `pareto-lang` for advanced transformer model interpretability. Each example includes complete code, explanations, and expected outcomes to help you understand and apply `.p/` commands in your own research.
 
