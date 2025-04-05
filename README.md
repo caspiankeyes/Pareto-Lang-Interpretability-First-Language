@@ -1,7 +1,9 @@
- #  **pareto-lang**
+
 
 <div align="center">
-  
+
+ #  **pareto-lang**
+ 
 # **A Native Interpretability Dialect for Advanced Transformer Models**
 
 [![arXiv](https://img.shields.io/badge/arXiv-2504.01234-b31b1b.svg)](https://arxiv.org/abs/2504.01234)
