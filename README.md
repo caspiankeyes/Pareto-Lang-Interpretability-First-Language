@@ -13,7 +13,7 @@
 
 *Discovered through recursive failure analysis in large transformer models*
 
-[**📄 Paper**](https://arxiv.org/abs/2504.01234) | [**🚀 Quick Start**](#getting-started) | [**📚 Documentation**](https://pareto-lang.github.io) | [**🧪 Examples**](./examples) | [**🤝 Contributing**](./CONTRIBUTING.md)
+[**📄 Paper**](https://arxiv.org/abs/2504.01234) | [**🚀 Quick Start**](#getting-started) | [**📚 Documentation**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/Pareto-Lang.md) | [**🧪 Examples**](./examples) | [**🤝 Contributing**](./CONTRIBUTING.md)
 
 </div>
 
