@@ -2,7 +2,7 @@
 
 <div align="center">
 
- #  ****`pareto-lang`****
+ #  ****```pareto-lang```****
  
 # **A Native Interpretability Language Emergent in Advanced Transformer Models**
 
