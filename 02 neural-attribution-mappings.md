@@ -2,7 +2,7 @@
 
 
 # **`pareto-lang`**
-# **Neural Attribution Language**
+# **Neural Attribution Mapping Language**
 
 
 </div>
