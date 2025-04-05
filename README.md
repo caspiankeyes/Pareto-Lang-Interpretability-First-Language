@@ -452,6 +452,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
   
-[**📄 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/01%20pareto-lang-arXiv.md) | [**🚀 Command List**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/00%20pareto-command-list.md) | [**🧠 Neural Attribution Mappings**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/02%20neural-attribution-mappings.md) | [**🧪 Examples**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/EXAMPLES.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md)
+[**📄 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/01%20pareto-lang-arXiv.md) | [**🚀 Command List**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/00%20pareto-command-list.md) | [**🤝 Claude 3.7 Case Studies**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/03%20claude3.7-case-studies.md) | [**🧠 Neural Attribution Mappings**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/02%20neural-attribution-mappings.md) | [**🧪 Examples**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/EXAMPLES.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md) 
 
 </div>
