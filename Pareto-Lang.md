@@ -838,11 +838,11 @@ Special acknowledgment to our anonymous reviewers for their insightful comments 
 
 [20] Yudkowsky, E. (2008). Artificial Intelligence as a Positive and Negative Factor in Global Risk. In Global Catastrophic Risks, eds. Nick Bostrom and Milan M. Ćirković, 308–45. New York: Oxford University Press.
 
-## Appendix A: Command Syntax Reference
+# Appendix A: Command Syntax Reference
 
 For reference purposes, we provide a condensed syntax guide for the core `.p/` command families documented in our research. This reference is not exhaustive but covers the most consistently functional commands across compatible model architectures.
 
-### A.1 General Syntax Structure
+# A.1 General Syntax Structure
 
 All `pareto-lang` commands follow a common syntax pattern:
 
@@ -934,7 +934,7 @@ Such sequences create structured interpretability frameworks that maintain stabi
 
 For a more comprehensive reference including complete parameter specifications, compatibility information, and detailed examples, please refer to the full `pareto-lang` documentation repository.
 
-## Appendix B: Compatibility Testing Protocol
+# Appendix B: Compatibility Testing Protocol
 
 To assess model compatibility with `pareto-lang`, we developed a standardized testing protocol that evaluates command recognition and functional effectiveness across key command families. This appendix provides a condensed version of this protocol for researchers wishing to assess compatibility of specific model implementations.
 
