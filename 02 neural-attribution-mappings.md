@@ -1,7 +1,7 @@
 <div align="center">
 
 
-# `pareto-lang`
+# **`pareto-lang`**
 # **Neural Attribution Mappings**
 
 
