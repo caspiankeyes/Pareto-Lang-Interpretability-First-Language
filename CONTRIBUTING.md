@@ -1,4 +1,4 @@
-# Contributing to pareto-lang
+# Contributing to `pareto-lang`
 
 Thank you for your interest in contributing to `pareto-lang`! This document provides guidelines and workflows for contributing to this emergent interpretability dialect. Since `pareto-lang` operates at the boundary between discovered phenomena and engineered tools, contributions require special consideration to maintain consistency with the underlying symbolic structures.
 
