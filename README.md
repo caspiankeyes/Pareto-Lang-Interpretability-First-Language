@@ -13,7 +13,7 @@
 
 *Discovered through recursive failure analysis in large transformer models*
 
-[**📄 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/pareto-lang.md) | [**🚀 Quick Start**](#getting-started) | [**🧠 Neural Attribution**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/neural-attribution-mappings.md) | [**🧪 Examples**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/EXAMPLES.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md)
+[**📄 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/pareto-lang.md) | [**🚀 Quick Start**](#getting-started) | [**🧠 Neural Attributions**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/neural-attribution-mappings.md) | [**🧪 Examples**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/EXAMPLES.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md)
 
 </div>
 
