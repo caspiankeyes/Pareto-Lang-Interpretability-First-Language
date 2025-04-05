@@ -13,7 +13,7 @@
 
 *Discovered through recursive failure analysis in large transformer models*
 
-[**📄 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/pareto-lang.md) | [**🚀 Command List**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/00%20pareto-command-list.md) | [**🧠 Neural Attribution Mappings**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/03%20neural-attribution-mappings.md) | [**🧪 Examples**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/EXAMPLES.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md)
+[**📄 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/01%20pareto-lang-arXiv.md) | [**🚀 Command List**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/00%20pareto-command-list.md) | [**🧠 Neural Attribution Mappings**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/03%20neural-attribution-mappings.md) | [**🧪 Examples**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/EXAMPLES.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md)
 
 </div>
 
