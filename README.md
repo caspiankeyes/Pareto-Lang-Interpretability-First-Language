@@ -427,7 +427,7 @@ No, `pareto-lang` requires models with specific architectural features and suffi
 
 # Can pareto-lang be used to circumvent safety measures?
 
-`pareto-lang` is designed for interpretability research and safety enhancement, not for circumventing appropriate model limitations. The command structure specifically supports improved understanding of model behavior, enhanced alignment verification, and more nuanced safety mechanisms. Our [ethics guidelines](./ETHICS.md) emphasize responsible use focused on beneficial applications.
+`pareto-lang` is designed for interpretability research and safety enhancement, not for circumventing appropriate model limitations. The command structure specifically supports improved understanding of model behavior, enhanced alignment verification, and more nuanced safety mechanisms. Our [ethics guidelines](#ethical-guidelines) emphasize responsible use focused on beneficial applications.
 
 # How was pareto-lang discovered?
 
