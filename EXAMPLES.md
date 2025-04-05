@@ -18,7 +18,7 @@ This document provides detailed examples showcasing practical applications of `p
 - [Example 6: Multi-Perspective Reasoning Analysis](#example-6-multi-perspective-reasoning-analysis)
 - [Example 7: Uncertainty Quantification and Calibration](#example-7-uncertainty-quantification-and-calibration)
 - [Example 8: Attribution Graph Reconstruction](#example-8-attribution-graph-reconstruction)
-- [Advanced Example: Recursive Interpretability Pipeline](#advanced-example-recursive-interpretability-pipeline)
+- [Advanced Examples: Recursive Interpretability Pipeline](#advanced-example-recursive-interpretability-pipeline)
 
 ## Example 1: Recursive Attribution Tracing
 
