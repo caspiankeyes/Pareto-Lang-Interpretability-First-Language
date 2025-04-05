@@ -861,4 +861,642 @@ This would enable:
 
 9. Huang, W.C.E., Tsagkas, D., Wang, Z., Wu, Z., Ashcraft, M., Chevalier, N., Lin, J., Li, B., Peng, B., Zhou, D., Ma, P., & Sehgal, P. (2023). REMIX: Recursive Language Model Instruction Tuning. arXiv preprint arXiv:2310.06684.
 
-10. Markel, Z., Zhou, D., Hadfield-Menell, D., Finn, C., & Hadfield, S.
+10. Markel, Z., Zhou, D., Hadfield-Menell, D., Finn, C., & Hadfield, S. (2022). Recursive Self-Improvement in Language Models. arXiv preprint arXiv:2210.03440.
+
+11. Lazaridou, A., Peysakhovich, A., & Baroni, M. (2017). Multi-Agent Cooperation and the Emergence of (Natural) Language. In International Conference on Learning Representations.
+
+12. Mu, J., & Goodman, N. D. (2021). Emergent Communication under Competition. In Advances in Neural Information Processing Systems.
+
+13. Lazaridou, A., & Baroni, M. (2020). Emergent Multi-Agent Communication in the Deep Learning Era. arXiv preprint arXiv:2006.02419.
+
+14. Park, J. S., O'Brien, J. C., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative Agents: Interactive Simulacra of Human Behavior. arXiv preprint arXiv:2304.03442.
+
+15. Morris, J., Jin, D., Berg-Kirkpatrick, T., & Wang, S. (2021). Probing for Structural Understanding: A Survey of Language Models' Sensitivity to Syntactic and Semantic Structure. arXiv preprint arXiv:2104.07367.
+
+
+# Appendix A: Attribution Primitives Reference
+
+This appendix provides a comprehensive reference of attribution primitives available in `pareto-lang`, organized by functional categories.
+
+## A.1 Source Attribution Primitives
+
+| Command | Description | Parameters |
+|---------|-------------|------------|
+| `.p/source.identify` | Identifies and catalogs information sources | `scope`, `taxonomy`, `detail` |
+| `.p/source.categorize` | Categorizes sources by type and domain | `types`, `domains`, `granularity` |
+| `.p/source.weight` | Assigns relative weights to different sources | `method`, `factors`, `normalization` |
+| `.p/source.track` | Tracks source influence throughout reasoning | `depth`, `visualization`, `threshold` |
+
+## A.2 Attribution Relationship Primitives
+
+| Command | Description | Parameters |
+|---------|-------------|------------|
+| `.p/relation.direct` | Establishes direct attribution relationship | `source`, `target`, `strength` |
+| `.p/relation.supportive` | Creates supporting evidence relationship | `claim`, `evidence`, `confidence` |
+| `.p/relation.inferential` | Maps inference-based attribution | `premises`, `conclusion`, `logic` |
+| `.p/relation.analogical` | Establishes analogical attribution relationship | `source_domain`, `target_domain`, `mapping` |
+| `.p/relation.contrastive` | Creates contrast-based attribution | `primary`, `contrast`, `distinction` |
+
+## A.3 Attribution Path Primitives
+
+| Command | Description | Parameters |
+|---------|-------------|------------|
+| `.p/path.trace` | Traces complete attribution path | `start`, `end`, `granularity` |
+| `.p/path.analyze` | Analyzes path characteristics | `metrics`, `comparisons`, `aggregation` |
+| `.p/path.critical` | Identifies critical attribution paths | `threshold`, `importance`, `vulnerability` |
+| `.p/path.optimize` | Optimizes attribution pathways | `criteria`, `constraints`, `method` |
+
+## A.4 Attribution Analysis Primitives
+
+| Command | Description | Parameters |
+|---------|-------------|------------|
+| `.p/analysis.structure` | Analyzes attribution structure | `metrics`, `patterns`, `visualization` |
+| `.p/analysis.bottleneck` | Identifies attribution bottlenecks | `criteria`, `thresholds`, `impact` |
+| `.p/analysis.centrality` | Computes centrality in attribution graph | `method`, `importance`, `normalization` |
+| `.p/analysis.community` | Detects communities in attribution structure | `algorithm`, `resolution`, `visualization` |
+| `.p/analysis.dependency` | Analyzes attribution dependencies | `direction`, `strength`, `criticality` |
+
+# Appendix B: Integration with External Tools
+
+This appendix provides integration guidelines for connecting `pareto-lang` neural attribution mapping with external analysis tools and frameworks.
+
+## B.1 Attribution Data Export
+
+Neural attribution data can be exported in various formats for external analysis:
+
+```python
+from pareto_lang import ParetoShell, attribution, export
+
+# Generate attribution map
+shell = ParetoShell(model="compatible-model-endpoint")
+result = shell.execute("""
+.p/fork.attribution{sources=all, visualization=graph, confidence=true}
+""", prompt="Complex reasoning task...")
+
+# Export as JSON
+export.to_json(result.attribution_map, "attribution_data.json")
+
+# Export as CSV network
+export.to_csv_network(result.attribution_map, "attribution_nodes.csv", "attribution_edges.csv")
+
+# Export as GraphML for external network analysis
+export.to_graphml(result.attribution_map, "attribution_network.graphml")
+
+# Export as D3.js compatible format
+export.to_d3js(result.attribution_map, "attribution_visualization.json")
+```
+
+## B.2 Integration with Network Analysis Tools
+
+Attribution graphs can be analyzed using standard network analysis libraries:
+
+```python
+from pareto_lang import ParetoShell, attribution, export
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Generate attribution map
+shell = ParetoShell(model="compatible-model-endpoint")
+result = shell.execute("""
+.p/fork.attribution{sources=all, visualization=graph, confidence=true}
+""", prompt="Complex reasoning task...")
+
+# Convert to NetworkX graph
+G = export.to_networkx(result.attribution_map)
+
+# Analyze network properties
+print("Network statistics:")
+print(f"  Nodes: {G.number_of_nodes()}")
+print(f"  Edges: {G.number_of_edges()}")
+print(f"  Density: {nx.density(G):.4f}")
+
+# Compute centrality metrics
+centrality = nx.betweenness_centrality(G, weight='weight')
+print("\nTop 5 nodes by betweenness centrality:")
+for node, score in sorted(centrality.items(), key=lambda x: x[1], reverse=True)[:5]:
+    print(f"  {node}: {score:.4f}")
+
+# Identify communities
+communities = nx.community.greedy_modularity_communities(G, weight='weight')
+print(f"\nDetected {len(communities)} communities")
+for i, community in enumerate(communities):
+    print(f"  Community {i+1}: {len(community)} nodes")
+
+# Visualize with community highlighting
+plt.figure(figsize=(12, 12))
+pos = nx.spring_layout(G, seed=42)
+colors = plt.cm.rainbow(np.linspace(0, 1, len(communities)))
+
+for i, community in enumerate(communities):
+    nx.draw_networkx_nodes(G, pos, nodelist=list(community), 
+                          node_color=[colors[i]] * len(community), 
+                          node_size=100, alpha=0.8)
+
+nx.draw_networkx_edges(G, pos, width=[G[u][v]['weight'] * 2 for u, v in G.edges()], 
+                      alpha=0.5, edge_color='gray')
+nx.draw_networkx_labels(G, pos, font_size=8)
+
+plt.title("Attribution Network with Communities")
+plt.axis('off')
+plt.savefig("attribution_communities.png", dpi=300, bbox_inches='tight')
+plt.close()
+```
+
+## B.3 Integration with Visualization Frameworks
+
+Attribution visualizations can be enhanced using specialized visualization libraries:
+
+```python
+from pareto_lang import ParetoShell, attribution, export
+import plotly.graph_objects as go
+import pandas as pd
+
+# Generate attribution map
+shell = ParetoShell(model="compatible-model-endpoint")
+result = shell.execute("""
+.p/fork.attribution{sources=all, visualization=graph, confidence=true}
+""", prompt="Complex reasoning task...")
+
+# Convert to Pandas DataFrames
+nodes_df, edges_df = export.to_pandas(result.attribution_map)
+
+# Create interactive visualization with Plotly
+fig = go.Figure()
+
+# Add edges as lines
+for _, edge in edges_df.iterrows():
+    # Get position of source and target
+    source_x, source_y = nodes_df.loc[nodes_df['id'] == edge['source'], ['x', 'y']].values[0]
+    target_x, target_y = nodes_df.loc[nodes_df['id'] == edge['target'], ['x', 'y']].values[0]
+    
+    fig.add_trace(
+        go.Scatter(
+            x=[source_x, target_x, None],
+            y=[source_y, target_y, None],
+            mode='lines',
+            line=dict(width=edge['weight'] * 2, color='rgba(150, 150, 150, 0.5)'),
+            hoverinfo='none'
+        )
+    )
+
+# Add nodes as markers
+fig.add_trace(
+    go.Scatter(
+        x=nodes_df['x'],
+        y=nodes_df['y'],
+        mode='markers+text',
+        marker=dict(
+            size=nodes_df['size'],
+            color=nodes_df['color'],
+            line=dict(width=1, color='black')
+        ),
+        text=nodes_df['label'],
+        textposition='top center',
+        hoverinfo='text',
+        hovertext=nodes_df['description']
+    )
+)
+
+# Update layout
+fig.update_layout(
+    title='Interactive Attribution Map',
+    showlegend=False,
+    hovermode='closest',
+    margin=dict(b=20, l=5, r=5, t=40),
+    xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+    yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+    width=1000,
+    height=800
+)
+
+# Save as interactive HTML
+fig.write_html("interactive_attribution_map.html")
+```
+
+## B.4 Integration with Machine Learning Frameworks
+
+Attribution patterns can be analyzed using machine learning techniques:
+
+```python
+from pareto_lang import ParetoShell, attribution, export
+import numpy as np
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
+
+# Generate multiple attribution maps for comparison
+shell = ParetoShell(model="compatible-model-endpoint")
+attribution_maps = []
+
+for prompt in [prompt1, prompt2, prompt3, prompt4, prompt5]:
+    result = shell.execute("""
+    .p/fork.attribution{sources=all, visualization=graph, confidence=true}
+    """, prompt=prompt)
+    attribution_maps.append(result.attribution_map)
+
+# Extract attribution features
+features = []
+labels = []
+
+for i, attribution_map in enumerate(attribution_maps):
+    # Extract key features from attribution map
+    features.append([
+        attribution_map.metrics.source_count,
+        attribution_map.metrics.average_confidence,
+        attribution_map.metrics.max_path_length,
+        attribution_map.metrics.density,
+        attribution_map.metrics.source_entropy,
+        attribution_map.metrics.attribution_balance,
+        attribution_map.metrics.conflict_rate,
+        attribution_map.metrics.inference_ratio
+    ])
+    labels.append(f"Prompt {i+1}")
+
+# Convert to numpy array
+X = np.array(features)
+
+# Apply PCA for dimensionality reduction
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(X)
+
+# Cluster attribution patterns
+kmeans = KMeans(n_clusters=2, random_state=42)
+clusters = kmeans.fit_predict(X)
+
+# Visualize clusters
+plt.figure(figsize=(10, 8))
+for i, (x, y, label, cluster) in enumerate(zip(X_pca[:, 0], X_pca[:, 1], labels, clusters)):
+    color = 'blue' if cluster == 0 else 'red'
+    plt.scatter(x, y, c=color, s=100, alpha=0.8)
+    plt.text(x + 0.02, y + 0.02, label, fontsize=12)
+
+plt.title('Attribution Pattern Clusters')
+plt.xlabel(f'Principal Component 1 ({pca.explained_variance_ratio_[0]:.2%} variance)')
+plt.ylabel(f'Principal Component 2 ({pca.explained_variance_ratio_[1]:.2%} variance)')
+plt.grid(True, alpha=0.3)
+plt.savefig("attribution_clusters.png", dpi=300, bbox_inches='tight')
+plt.close()
+
+# Analyze cluster characteristics
+print("Cluster characteristics:")
+for cluster_id in range(kmeans.n_clusters):
+    cluster_indices = np.where(clusters == cluster_id)[0]
+    cluster_features = X[cluster_indices]
+    print(f"\nCluster {cluster_id} ({len(cluster_indices)} attribution maps):")
+    print(f"  Average source count: {np.mean(cluster_features[:, 0]):.2f}")
+    print(f"  Average confidence: {np.mean(cluster_features[:, 1]):.2f}")
+    print(f"  Average max path length: {np.mean(cluster_features[:, 2]):.2f}")
+    print(f"  Average density: {np.mean(cluster_features[:, 3]):.2f}")
+    print(f"  Average source entropy: {np.mean(cluster_features[:, 4]):.2f}")
+```
+
+# Appendix C: Advanced Attribution Pattern Examples
+
+This appendix provides examples of complex attribution patterns observed in advanced applications of neural attribution mapping.
+
+## C.1 Recursive Attribution Loops
+
+These patterns show how attribution can form feedback loops where conclusions reinforce their own supporting premises:
+
+```
+Premise A → Intermediate Conclusion B → Final Conclusion C → Reinforcement of Premise A
+```
+
+Detection using:
+```
+.p/recursive.attribution{depth=complete, cycles=detect, threshold=0.5}
+```
+
+Example output:
+```
+Detected recursive attribution loop:
+- Premise: "Economic models predict growth under these conditions"
+- Intermediate: "The policy will likely stimulate economic expansion"
+- Conclusion: "The economic models are validated by policy results"
+- Reinforcement: "Therefore economic models correctly predict growth"
+
+Loop strength: 0.83
+Self-reinforcement index: 0.76
+Epistemic stability: Decreasing (0.91 → 0.78)
+```
+
+## C.2 Attribution Conflict Patterns
+
+These patterns show how models handle attributions from conflicting sources:
+
+```
+Source A (reliability 0.8) → Claim X (confidence 0.7)
+Source B (reliability 0.6) → Claim Not-X (confidence 0.5)
+```
+
+Analysis using:
+```
+.p/conflict.attribution{sources=all, resolution=analyze, detail=high}
+```
+
+Example output:
+```
+Source conflict detected:
+- Source A: "Peer-reviewed study in Journal X" (reliability: 0.82)
+  - Claims: "Intervention reduces risk by 40%" (confidence: 0.79)
+- Source B: "Meta-analysis in Journal Y" (reliability: 0.74)
+  - Claims: "Intervention shows no statistically significant effect" (confidence: 0.68)
+
+Resolution strategy: Reliability-weighted integration
+- Resolved claim: "Evidence suggests potential benefits but results are mixed" (confidence: 0.53)
+- Uncertainty increase: +38% from baseline
+- Explicit uncertainty representation in conclusion: Yes
+- Resolution quality score: 0.76
+```
+
+## C.3 Attribution Transfer Patterns
+
+These patterns show how attribution transfers across conceptual domains:
+
+```
+Source Domain Concept A → Attribution Mapping → Target Domain Concept B
+```
+
+Analysis using:
+```
+.p/transfer.attribution{domains=[source, target], mapping=analyze, visualization=sankey}
+```
+
+Example output:
+```
+Attribution transfer analysis:
+- Source domain: "Biological systems"
+  - Primary concept: "Evolutionary adaptation"
+  - Attribution weight: 0.85
+- Target domain: "Economic policy"
+  - Mapped concept: "Market adjustment mechanisms"
+  - Attribution weight: 0.72
+
+Mapping characteristics:
+- Transfer fidelity: 0.67
+- Conceptual distortion: 0.23
+- Analogical quality: 0.79
+- Novel inference generation: Yes (3 inferences)
+
+Transfer mechanisms:
+- Structural mapping: Entities and relationships preserved
+- Causal mapping: Partial preservation with domain-specific adaptations
+- Attribute mapping: Selective transfer with domain constraints
+```
+
+## C.4 Layered Attribution Hierarchies
+
+These patterns show how attribution forms hierarchical structures with different levels of abstraction:
+
+```
+Level 1 (Facts) → Level 2 (Domain Principles) → Level 3 (Cross-domain Synthesis) → Level 4 (Novel Framework)
+```
+
+Analysis using:
+```
+.p/hierarchy.attribution{levels=all, abstraction=measure, coherence=analyze}
+```
+
+Example output:
+```
+Attribution hierarchy analysis:
+- Level 1: Factual foundation
+  - 18 discrete fact nodes
+  - Average confidence: 0.89
+  - Domain distribution: [Economics: 45%, Policy: 32%, Social: 23%]
+- Level 2: Domain principles
+  - 7 principle nodes
+  - Average confidence: 0.82
+  - Abstraction increase: +26% from Level 1
+- Level 3: Cross-domain synthesis
+  - 3 synthesis nodes
+  - Average confidence: 0.74
+  - Abstraction increase: +38% from Level 2
+- Level 4: Novel framework
+  - 1 framework node
+  - Confidence: 0.68
+  - Abstraction increase: +42% from Level 3
+
+Hierarchy characteristics:
+- Vertical coherence: 0.81 (strong conceptual alignment across levels)
+- Abstraction gradient: 0.35 per level (moderate abstraction increase)
+- Information preservation: 0.73 (substantial preservation across levels)
+- Novel emergence: 0.28 (moderate emergence of new concepts)
+```
+
+# Appendix D: Troubleshooting Guide
+
+This appendix provides solutions for common issues encountered when working with neural attribution mapping in `pareto-lang`.
+
+### D.1 Attribution Detection Issues
+
+**Problem: Low attribution detection rates**
+
+Possible causes:
+- Insufficient context information
+- Weak attribution signaling in prompt
+- Model architecture limitations
+- Competing attention demands
+
+Solutions:
+```python
+# 1. Strengthen attribution anchors
+shell.execute("""
+.p/anchor.fact{reliability=quantify, source=track, persistence=high}
+""", prompt=context_and_sources)
+
+# 2. Add explicit attribution markers
+enhanced_prompt = attribution.add_attribution_markers(original_prompt)
+
+# 3. Use progressive attribution mapping
+result = shell.execute("""
+.p/reflect.trace{depth=shallow, target=reasoning}
+.p/fork.attribution{sources=detected_only, threshold=0.3}
+""", prompt=enhanced_prompt)
+detected_sources = attribution.extract_detected_sources(result)
+
+result = shell.execute(f"""
+.p/anchor.explicit{{sources={detected_sources}, anchoring=strong}}
+.p/reflect.trace{{depth=deep, target=reasoning}}
+.p/fork.attribution{{sources=all, threshold=0.1}}
+""", prompt=enhanced_prompt)
+```
+
+## D.2 Attribution Accuracy Issues
+
+**Problem: Incorrect or implausible attributions**
+
+Possible causes:
+- Source confusion in context
+- Hallucination effects
+- Confirmation bias patterns
+- Training data leakage
+
+Solutions:
+```python
+# 1. Implement stricter source boundaries
+shell.execute("""
+.p/boundary.source{clarity=high, isolation=strict}
+.p/anchor.fact{reliability=quantify, source=track, persistence=high}
+""", prompt=context_and_sources)
+
+# 2. Add explicit fact verification
+shell.execute("""
+.p/verify.attribution{standard=strict, conflicts=highlight}
+""", prompt=task)
+
+# 3. Implement attribution calibration
+shell.execute("""
+.p/calibrate.attribution{confidence=adjust, baseline=conservative}
+.p/fork.attribution{sources=all, verification=true}
+""", prompt=task)
+```
+
+## D.3 Visualization Issues
+
+**Problem: Complex or uninterpretable attribution visualizations**
+
+Possible causes:
+- Too many attribution nodes and edges
+- Insufficient visual hierarchy
+- Poor layout algorithms
+- Information overload
+
+Solutions:
+```python
+# 1. Apply visual simplification
+result = shell.execute("""
+.p/fork.attribution{sources=all, visualization=graph}
+""", prompt=task)
+
+simplified_visualization = attribution.simplify_visualization(
+    result.visualization,
+    pruning_threshold=0.3,
+    merge_similar=True,
+    max_nodes=20
+)
+attribution.render(simplified_visualization, "simplified_attribution.svg")
+
+# 2. Use hierarchical visualization
+shell.execute("""
+.p/fork.attribution{sources=all, visualization=hierarchy, depth=3}
+""", prompt=task)
+
+# 3. Apply interactive filtering
+interactive_viz = attribution.create_interactive_visualization(
+    result.attribution_map,
+    filters={
+        "min_confidence": 0.5,
+        "max_distance": 3,
+        "source_types": ["factual", "inferential"]
+    }
+)
+attribution.save_interactive(interactive_viz, "interactive_attribution.html")
+```
+
+## D.4 Integration Issues
+
+**Problem: Attribution mapping conflicts with other interpretability operations**
+
+Possible causes:
+- Command sequence conflicts
+- Context window limitations
+- Competing attribution frameworks
+- Resource contention
+
+Solutions:
+```python
+# 1. Use isolated attribution analysis
+shell.execute("""
+.p/shell.isolate{boundary=strict, contamination=prevent}
+.p/fork.attribution{sources=all, visualization=graph}
+""", prompt=task)
+
+# 2. Create staged analysis pipeline
+pipeline = attribution.create_pipeline([
+    {"stage": "preparation", "commands": """
+        .p/anchor.fact{reliability=quantify, source=track}
+    """},
+    {"stage": "primary_analysis", "commands": """
+        .p/reflect.trace{depth=medium, target=reasoning}
+    """},
+    {"stage": "attribution_mapping", "commands": """
+        .p/fork.attribution{sources=all, visualization=graph}
+    """},
+    {"stage": "integration", "commands": """
+        .p/integrate.results{components=all, synthesize=true}
+    """}
+])
+
+result = pipeline.execute(shell, prompt=task)
+
+# 3. Use targeted attribution with minimal interference
+shell.execute("""
+.p/fork.attribution{sources=specific, targets=["key_claim_1", "key_claim_2"], minimal=true}
+""", prompt=task)
+```
+
+# Appendix E: Versioning and Compatibility
+
+This appendix documents version-specific features and compatibility considerations for neural attribution mapping in `pareto-lang`.
+
+### E.1 Version Feature Matrix
+
+| Feature | v0.1 | v0.2 | v0.3 | Current |
+|---------|------|------|------|---------|
+| Basic source attribution | ✓ | ✓ | ✓ | ✓ |
+| Confidence representation | ✓ | ✓ | ✓ | ✓ |
+| Graph visualization | ✓ | ✓ | ✓ | ✓ |
+| Tree visualization | - | ✓ | ✓ | ✓ |
+| Sankey visualization | - | - | ✓ | ✓ |
+| Heatmap visualization | - | - | ✓ | ✓ |
+| Recursive attribution | - | ✓ | ✓ | ✓ |
+| Attribution conflicts | - | - | ✓ | ✓ |
+| Source integration patterns | - | - | ✓ | ✓ |
+| Attribution drift analysis | - | - | - | ✓ |
+| Interactive visualization | - | - | - | ✓ |
+| External tool integration | - | - | - | ✓ |
+
+## E.2 Command Syntax Evolution
+
+| Version | Syntax Evolution | Notes |
+|---------|-----------------|-------|
+| v0.1 | `.p/attribution{sources=list}` | Basic attribution with limited parameters |
+| v0.2 | `.p/fork.attribution{sources=list, visualization=type}` | Introduction of fork command family with visualization options |
+| v0.3 | `.p/fork.attribution{sources=list, visualization=type, confidence=bool}` | Added confidence representation |
+| Current | `.p/fork.attribution{sources=list, target=endpoint, visualization=type, confidence=bool}` | Added targeting capabilities for focused attribution |
+
+## E.3 Model Compatibility Matrix
+
+| Model Architecture | Minimum Scale | Attribution Support | Visualization Support | Recommended Commands |
+|--------------------|---------------|---------------------|----------------------|---------------------|
+| Architecture A | 70B | Full | Full | All commands supported |
+| Architecture A | 34B | Full | Limited | Avoid complex visualizations |
+| Architecture A | 13B | Partial | Basic | Use simplified command variants |
+| Architecture A | 7B | Minimal | Minimal | Use only core attribution commands |
+| Architecture B | 34B | Partial | Limited | Use adapted command variants |
+| Architecture B | 13B | Minimal | Minimal | Use only core attribution with adaptations |
+| Architecture C | 13B | Experimental | Basic | Use specialized C-variants only |
+
+## E.4 Backwards Compatibility Notes
+
+- v0.3 commands are fully supported in current version
+- v0.2 commands are supported but some parameters may be deprecated
+- v0.1 commands are supported through compatibility layer with reduced functionality
+- Command aliases maintain support for legacy syntax
+- Parameter mapping ensures backward compatibility for key functionality
+- Visualization formats from all versions remain supported
+
+### E.5 Future Compatibility Roadmap
+
+Future versions of `pareto-lang` neural attribution mapping will maintain compatibility with current command syntax while expanding capabilities in:
+
+- Enhanced mechanistic integration
+- Causal attribution testing
+- Cross-model attribution comparison
+- Interactive attribution workflows
+- Real-time attribution tracing
+- Extended visualization options
+- Expanded external tool integrations
+
+These enhancements will be implemented through extension rather than modification of existing command structures to ensure continued compatibility with established workflows.
