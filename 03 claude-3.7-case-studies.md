@@ -1620,7 +1620,7 @@ In conclusion, `pareto-lang` represents a significant advance in transformer mod
 
 # Acknowledgments
 
-We thank the entire research team at the Advanced Language Model Interpretability Lab for their contributions to this work. Special acknowledgment to the Recursive Systems Analysis Group and the Emergent Behavior Research Consortium for their support and insights. We also thank the anonymous reviewers who provided valuable feedback on earlier versions of these case studies.
+We thank the anonymous researchers and eviewers who provided valuable feedback on earlier versions of these case studies.
 
 # References
 
