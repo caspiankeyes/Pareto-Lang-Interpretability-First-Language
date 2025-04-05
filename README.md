@@ -441,14 +441,10 @@ Yes, our research indicates that the `.p/` command taxonomy continues to evolve 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-# Acknowledgments
-
-We gratefully acknowledge support from the Advanced Language Model Interpretability Lab, the Recursive Systems Analysis Group, and the Emergent Behavior Research Consortium. Special thanks to all contributors who have helped document, test, and extend `pareto-lang`.
-
 ---
 
 <div align="center">
   
-[**📄 Paper**](https://arxiv.org/abs/2504.01234) | [**🚀 Quick Start**](#getting-started) | [**📚 Documentation**](https://pareto-lang.github.io) | [**🧪 Examples**](./examples) | [**🤝 Contributing**](./CONTRIBUTING.md)
+[**📄 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/01%20pareto-lang-arXiv.md) | [**🚀 Command List**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/00%20pareto-command-list.md) | [**🧠 Neural Attribution Mappings**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/03%20neural-attribution-mappings.md) | [**🧪 Examples**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/EXAMPLES.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md)
 
 </div>
