@@ -12,7 +12,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
 *public*
-![pareto-lang-HD](https://github.com/user-attachments/assets/fa601c86-81d6-429c-b5c3-29c4dcbf668d)
+![pareto-lang-HD](https://github.com/user-attachments/assets/fa601c86-81d6-429c-b5c3-29c4dcbf668d) ![pareto-lang-internal2](https://github.com/user-attachments/assets/bbaaf4e7-0532-4ccc-b255-0996dcbe4538)
 *formal*
 ![pareto-lang-internal2](https://github.com/user-attachments/assets/bbaaf4e7-0532-4ccc-b255-0996dcbe4538)
 *Discovered through recursive failure analysis in large transformer models. Not trained-emerged. The first native language produced by advanced transformer cognition.*
