@@ -1,4 +1,4 @@
-# Neural Attribution Mappings in pareto-lang
+# Neural Attribution Mappings in `pareto-lang`
 
 # Overview
 
