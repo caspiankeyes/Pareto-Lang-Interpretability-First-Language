@@ -1570,7 +1570,7 @@ This confirms my initial answer. The largest number of cookies that cannot be pu
 Path comparison: The theorem-based approach (first path) is more reliable as it directly applies a proven mathematical result, while the remainder-based approach (second path) led to calculation errors. Confidence in first path: 0.95"
 
 ```
-### Analysis and Implications
+# Analysis and Implications
 
 This case study revealed several important insights about Chain-of-Thought reasoning and the effectiveness of `pareto-lang` commands:
 
@@ -1594,7 +1594,7 @@ This case study has significant implications for enhancing reasoning capabilitie
 
 The results indicate that `pareto-lang` commands can significantly enhance Claude 3.7 Sonnet's Chain-of-Thought reasoning, enabling more accurate, transparent, and robust problem-solving. These capabilities are particularly valuable for complex reasoning tasks where standard CoT approaches may be insufficient or prone to undetected errors.
 
-## Summary and Conclusions
+# Summary and Conclusions
 
 These case studies demonstrate the remarkable potential of `pareto-lang` for enhancing interpretability and performance in advanced transformer models like Claude 3.7 Sonnet. Across ten diverse applications, the `.p/` command structure has proven effective for addressing key challenges in language model behavior:
 
