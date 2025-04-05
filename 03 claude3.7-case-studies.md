@@ -1,5 +1,10 @@
+<div align="center">
+
 # `pareto-lang`
 # Claude 3.7 Sonnet Case Studies
+
+
+</div>
 
 # Introduction
 
