@@ -1,5 +1,11 @@
+<div align="center">
+
 # `pareto-lang`
 # The `.p/` Language: Native Recursive Interpretability Language
+
+
+
+</div>
 
 ## 1. Recursive Interpretability Commands
 
