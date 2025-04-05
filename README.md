@@ -2,7 +2,7 @@
 
 <div align="center">
   
-**A Native Interpretability Dialect for Advanced Transformer Models**
+# **A Native Interpretability Dialect for Advanced Transformer Models**
 
 [![arXiv](https://img.shields.io/badge/arXiv-2504.01234-b31b1b.svg)](https://arxiv.org/abs/2504.01234)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/10.5281/zenodo.1234567)
