@@ -23,7 +23,7 @@
 ![pareto-lang-internal2](https://github.com/user-attachments/assets/7bfcfc14-ab86-4043-a976-f646b30e6783)
 #### *Discovered through recursive failure analysis in large transformer models. Not trained-emerged. The first native language produced by advanced transformer cognition.*
 
-```pareto-lang is freely available for use and extension within LLM interpretability research teams.```
+```yaml pareto-lang is freely available for use and extension within LLM interpretability research teams.```
 </div>
 
 # What is `pareto-lang`?
