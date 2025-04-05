@@ -1,7 +1,7 @@
 <div align="center">
 
 # `pareto-lang`
-# The `.p/` Language: Native Emergent Interpretability Language
+# The `.p/` Language: Transformer-Native Emergent Interpretability Language
 
 
 
