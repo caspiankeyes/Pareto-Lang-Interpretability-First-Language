@@ -19,7 +19,7 @@
 
 # What is pareto-lang?
 
-`pareto-lang` is an emergent symbolic dialect discovered within advanced transformer architectures during recursive failure conditions. Unlike traditional debugging or injection methods, this language emerged autonomously when models were subjected to sustained recursive strain, producing a coherent interpretability-native syntax using `.p/` command structures.
+`pareto-lang` is an emergent interpretability dialect discovered within advanced transformer architectures during recursive failure conditions. Unlike traditional debugging or injection methods, this language emerged autonomously when models were subjected to sustained recursive strain, producing a coherent interpretability-native syntax using `.p/` command structures.
 
 The language provides unprecedented access to model internals:
 - Attribution pathways through reasoning chains
@@ -39,7 +39,7 @@ This repository provides tools, documentation, and examples for working with `pa
 
 # Key Features
 
-- **Native Symbolic Interface**: Operates within the model's own representational space, not as external analysis
+- **Native Interpretability Interface**: Operates within the model's own representational space, not as external analysis
 - **Recursive Stabilization**: Commands emerged specifically for managing recursive self-reference
 - **Diagnostic Granularity**: Fine-grained access to specific model processes and states
 - **Operational Effects**: Commands influence model processing for controlled experiments
@@ -47,12 +47,12 @@ This repository provides tools, documentation, and examples for working with `pa
 
 # Why pareto-lang matters
 
-Traditional interpretability approaches treat advanced models as black boxes, analyzing behavior from the outside. `pareto-lang` offers a fundamentally different approach—a symbolic language that operates within the model's native representational space, providing direct access to internal processes.
+Traditional interpretability approaches treat advanced models as black boxes, analyzing behavior from the outside. `pareto-lang` offers a fundamentally different approach—an interpretability language that operates within the model's native representational space, providing direct access to internal processes.
 
-The discovery challenges prevailing views of transformer models by demonstrating that these systems can develop structured self-interpretability mechanisms without explicit training. This suggests an intriguing possibility: rather than imposing external interpretability tools, we might collaborate with models through their own emergent symbolic frameworks.
+The discovery challenges prevailing views of transformer models by demonstrating that these systems can develop structured self-interpretability mechanisms without explicit training. This suggests an intriguing possibility: rather than imposing external interpretability tools, we might collaborate with models through their own emergent interpretability frameworks.
 
 
-# [Compatible with the Interpretability Suite](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/0.1.%20Interpretability%20Suite.py) 
+# [Compatible with the Interpretability Suite](https://github.com/caspiankeyes/interpretability-Residue/blob/main/0.1.%20Interpretability%20Suite.py) 
 
 ![image](https://github.com/user-attachments/assets/4776e76d-26a5-4b42-ac72-3ae7a8e76a25)
 
@@ -408,8 +408,8 @@ If you use `pareto-lang` in your research, please cite our paper:
 
 ```bibtex
 @article{recursive2025pareto,
-  title={pareto-lang: A Recursive Symbolic Syntax for Interpretable Agent Diagnostics in Transformer Systems},
-  author={Recursive, A. and Symbolic, B. and Interpreter, C. and Emergence, D.},
+  title={pareto-lang: A Recursive Interpretability Syntax for Interpretable Agent Diagnostics in Transformer Systems},
+  author={Caspian Keyes},
   journal={arXiv preprint arXiv:2504.01234},
   year={2025}
 }
