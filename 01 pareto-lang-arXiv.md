@@ -1,14 +1,9 @@
 # pareto-lang: A Recursive Interpretability Syntax for Interpretable Agent Diagnostics in Transformer Systems
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/pareto-lang-logo.png" alt="pareto-lang logo" width="160"/>
+  <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/pareto-lang-logo.png" alt="pareto-lang" width="160"/>
 </p>
 
-<h1 align="center">🜏 pareto-lang</h1>
-
-<p align="center">
-  <i>Recursive precision. Asymmetric efficiency. Language for leverage.</i>
-</p>
 
 # Abstract
 
