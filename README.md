@@ -52,7 +52,7 @@ Traditional interpretability approaches treat advanced models as black boxes, an
 The discovery challenges prevailing views of transformer models by demonstrating that these systems can develop structured self-interpretability mechanisms without explicit training. This suggests an intriguing possibility: rather than imposing external interpretability tools, we might collaborate with models through their own emergent interpretability frameworks.
 
 
-# [Compatible with the Interpretability Suite](https://github.com/caspiankeyes/interpretability-Residue/blob/main/0.1.%20Interpretability%20Suite.py) 
+# [Compatible with the Interpretability Suite](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/0.1.%20Interpretability%20Suite.py) 
 
 ![image](https://github.com/user-attachments/assets/4776e76d-26a5-4b42-ac72-3ae7a8e76a25)
 
