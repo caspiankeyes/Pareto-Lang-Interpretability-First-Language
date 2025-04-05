@@ -1,4 +1,4 @@
-# 🔬 pareto-lang
+# pareto-lang
 
 <div align="center">
   
