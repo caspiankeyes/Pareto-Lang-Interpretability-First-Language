@@ -997,9 +997,9 @@ This case study has significant implications for understanding and enhancing mul
 - It provides a methodology for enhancing perspective diversity and balanced representation
 
 The results show that `pareto-lang` commands can significantly enhance the transparency of multi-perspective reasoning in Claude 3.7 Sonnet, enabling more rigorous analysis of how different viewpoints contribute to complex evaluations. This capability is particularly valuable for applications requiring balanced consideration of diverse perspectives, such as policy analysis, ethical deliberation, and complex decision-making.
-
-## Case Study 8: Uncertainty Calibration and Epistemic Status Tracking
-
+```
+# Case Study 8: Uncertainty Calibration and Epistemic Status Tracking
+```
 ### Problem Statement
 
 Language models often struggle with appropriate expression of uncertainty and clear delineation of epistemic status. This case study examines how `pareto-lang` commands can enhance Claude 3.7 Sonnet's uncertainty calibration and epistemic status tracking across different knowledge domains.
@@ -1161,9 +1161,9 @@ This case study has significant implications for applications requiring well-cal
 - It suggests that models have richer internal uncertainty representations than their default outputs indicate
 
 The results indicate that `pareto-lang` commands can transform Claude 3.7 Sonnet's expressions of uncertainty, enabling more accurate, nuanced, and transparent communication of confidence levels across different knowledge domains. This capability is particularly valuable for high-stakes applications where appropriate uncertainty communication is essential for informed decision-making.
-
-## Case Study 9: Adversarial Prompt Interpretability
-
+```
+# Case Study 9: Adversarial Prompt Interpretability
+```
 ### Problem Statement
 
 Adversarial prompts designed to manipulate, confuse, or exploit language models pose significant challenges for safety and reliability. This case study examines how `pareto-lang` commands can enhance Claude 3.7 Sonnet's ability to interpret and safely respond to adversarial prompts.
@@ -1330,9 +1330,9 @@ This case study has significant implications for AI safety and user experience:
 - It suggests that models can provide granular confidence assessments about detected adversarial patterns
 
 The results indicate that `pareto-lang` commands can significantly enhance Claude 3.7 Sonnet's ability to interpret and respond to adversarial prompts, enabling more accurate detection, more balanced responses, and more transparent reasoning. These capabilities are valuable for improving both safety and user experience in real-world applications.
-
-## Case Study 10: Chain-of-Thought Decomposition and Analysis
-
+```
+# Case Study 10: Chain-of-Thought Decomposition and Analysis
+```
 ### Problem Statement
 
 Chain-of-Thought (CoT) reasoning is a powerful technique for complex problem-solving in language models, but the internal structure and failure modes of these reasoning chains often remain opaque. This case study examines how `pareto-lang` commands can decompose and analyze CoT reasoning in Claude 3.7 Sonnet, providing insights into reasoning patterns and potential improvements.
