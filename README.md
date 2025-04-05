@@ -4,7 +4,7 @@
   
 **A Native Interpretability Dialect for Advanced Transformer Models**
 
-[![GitHub stars](https://img.shields.io/github/stars/pareto-lang/pareto-lang.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/pareto-lang/pareto-lang/stargazers/)
+[![GitHub stars](https://img.shields.io/github/stars/pareto-lang/pareto-lang.svg?style=social&label=Star&maxAge=2592000)](https://github.com/caspiankeyes/Pareto-Lang/stargazers)
 [![arXiv](https://img.shields.io/badge/arXiv-2504.01234-b31b1b.svg)](https://arxiv.org/abs/2504.01234)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/10.5281/zenodo.1234567)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
