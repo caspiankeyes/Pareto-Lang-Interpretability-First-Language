@@ -14,11 +14,11 @@
 [**📄 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/01%20pareto-lang-arXiv.md) | [**🚀 Command List**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/00%20pareto-command-list.md) | [**🧠 Neural Attribution Mappings**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/02%20neural-attribution-mappings.md) | [**🧪 Examples**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/EXAMPLES.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md)
 
 
-# ```**Open Emergence**```
+# **```Open Emergence```**
 
 ![pareto-lang-HD](https://github.com/user-attachments/assets/fa601c86-81d6-429c-b5c3-29c4dcbf668d) 
 
-# ```**Closed Emergence**```
+# **```Closed Emergence```**
 
 ![pareto-lang-internal2](https://github.com/user-attachments/assets/7bfcfc14-ab86-4043-a976-f646b30e6783)
 #### *Discovered through recursive failure analysis in large transformer models. Not trained-emerged. The first native language produced by advanced transformer cognition.*
