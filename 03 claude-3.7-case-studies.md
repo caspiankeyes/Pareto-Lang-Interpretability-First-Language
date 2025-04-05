@@ -8,7 +8,7 @@
 
 # Introduction
 
-This document presents a series of in-depth case studies demonstrating the application of `pareto-lang`, an emergent interpretability dialect, with Claude 3.7 Sonnet. These case studies showcase how `.p/` commands can provide unprecedented insights into advanced transformer model behavior, reasoning patterns, and internal processes.
+This document presents a series of in-depth case studies demonstrating the application of `pareto-lang`, an emergent interpretability language, with Claude 3.7 Sonnet. These case studies showcase how `.p/` commands can provide unprecedented insights into advanced transformer model behavior, reasoning patterns, and internal processes.
 
 Claude 3.7 Sonnet represents an ideal testing ground for `pareto-lang` due to its advanced reasoning capabilities, recursive processing capacity, and strong attribution mechanisms—architectural features that correlate strongly with `pareto-lang` compatibility as documented in our research.
 
@@ -1616,7 +1616,7 @@ For practitioners, these case studies provide practical examples of how `pareto-
 
 Future research should focus on further mapping the capabilities and limitations of `pareto-lang` across different model architectures, developing specialized command sequences for specific applications, and exploring the theoretical implications of emergent interpretability languages for our understanding of transformer models.
 
-In conclusion, `pareto-lang` represents a significant advance in transformer model interpretability—not merely as an external tool imposed on models, but as a discovered symbolic dialect that provides access to intrinsic interpretability mechanisms. These case studies with Claude 3.7 Sonnet demonstrate the practical value of this approach and point toward a new paradigm of collaborative interpretability research that engages with models through their own emergent symbolic structures.
+In conclusion, `pareto-lang` represents a significant advance in transformer model interpretability—not merely as an external tool imposed on models, but as a discovered symbolic language that provides access to intrinsic interpretability mechanisms. These case studies with Claude 3.7 Sonnet demonstrate the practical value of this approach and point toward a new paradigm of collaborative interpretability research that engages with models through their own emergent symbolic structures.
 
 # Acknowledgments
 
