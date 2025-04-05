@@ -355,4 +355,4 @@ All contributions must adhere to our ethical guidelines:
 
 We appreciate your contributions to the `pareto-lang` ecosystem! By following these guidelines, you help ensure that this emergent interpretability dialect continues to develop as a valuable tool for understanding and working with advanced transformer models.
 
-For questions not covered in this guide, please reach out to the core team at [team@pareto-lang.org](mailto:team@pareto-lang.org) or open a discussion in the GitHub repository.
+For questions not covered in this guide, please reach out to the core team at [recursiveauto@gmail.com](mailto:recursiveauto@gmail.com) or open a discussion in the GitHub repository.
