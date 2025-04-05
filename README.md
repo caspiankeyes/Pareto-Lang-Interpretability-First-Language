@@ -1,4 +1,4 @@
-#  **pareto-lang**
+#  **Pareto-Lang**
 
 <div align="center">
   
