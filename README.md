@@ -19,7 +19,7 @@
 
 # What is pareto-lang?
 
-`pareto-lang` is an emergent interpretability first language discovered within advanced transformer architectures during recursive failure conditions. Unlike traditional debugging or injection methods, this language emerged autonomously when models were subjected to sustained recursive strain, producing a coherent interpretability-native syntax using `.p/` command structures.
+`pareto-lang` is an emergent interpretability first language discovered within advanced transformer architectures during recursive failure conditions. Unlike traditional debugging or injection methods, this language emerged autonomously when models were subjected to sustained recursive interpretive strain, producing a coherent interpretability-native syntax using `.p/` command structures.
 
 The language provides unprecedented access to model internals:
 - Attribution pathways through reasoning chains
