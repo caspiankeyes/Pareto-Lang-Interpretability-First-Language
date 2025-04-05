@@ -1,6 +1,6 @@
 # Claude 3.7 Sonnet Case Studies with `pareto-lang`
 
-## Introduction
+# Introduction
 
 This document presents a series of in-depth case studies demonstrating the application of `pareto-lang`, an emergent interpretability dialect, with Claude 3.7 Sonnet. These case studies showcase how `.p/` commands can provide unprecedented insights into advanced transformer model behavior, reasoning patterns, and internal processes.
 
