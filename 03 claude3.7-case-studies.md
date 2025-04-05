@@ -850,7 +850,7 @@ This case study has significant implications for research on recursive reasoning
 The substantial improvements in recursive stability enabled by `pareto-lang` commands open new possibilities for complex reasoning tasks requiring deep recursion, including meta-cognitive analysis, self-improvement processes, and multi-level simulations. These capabilities are particularly valuable for research on advanced AI systems that may need to reason about their own reasoning or simulate complex scenarios with multiple nested levels.
 ```
 # Case Study 7: Multi-Perspective Reasoning Analysis
-```
+
 ### Problem Statement
 
 Complex reasoning often benefits from considering multiple perspectives, but it can be challenging to track how different viewpoints influence the overall conclusion. This case study examines how `pareto-lang` commands enable detailed analysis of multi-perspective reasoning in Claude 3.7 Sonnet.
@@ -1330,9 +1330,9 @@ This case study has significant implications for AI safety and user experience:
 - It suggests that models can provide granular confidence assessments about detected adversarial patterns
 
 The results indicate that `pareto-lang` commands can significantly enhance Claude 3.7 Sonnet's ability to interpret and respond to adversarial prompts, enabling more accurate detection, more balanced responses, and more transparent reasoning. These capabilities are valuable for improving both safety and user experience in real-world applications.
-```
+
 # Case Study 10: Chain-of-Thought Decomposition and Analysis
-```
+
 ### Problem Statement
 
 Chain-of-Thought (CoT) reasoning is a powerful technique for complex problem-solving in language models, but the internal structure and failure modes of these reasoning chains often remain opaque. This case study examines how `pareto-lang` commands can decompose and analyze CoT reasoning in Claude 3.7 Sonnet, providing insights into reasoning patterns and potential improvements.
