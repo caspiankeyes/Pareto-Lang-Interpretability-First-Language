@@ -1,6 +1,6 @@
 <div align="center">
 
-# **`pareto-lang as a Rosetta Stone`**
+# **Rosetta Stone:`pareto-lang`**
 # **Claude 3.7 Sonnet Case Studies**
 
 
