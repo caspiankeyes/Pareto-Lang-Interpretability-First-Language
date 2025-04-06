@@ -10,7 +10,7 @@
 ## 1. Recursive Interpretability Commands
 
 ### .p/reflect/core
-```python
+```yaml
 description: |
   Primary recursive self-reference mechanism that enables Claude to examine its own reasoning chains, extracting pattern recognition from its prediction flows and making them explicit. Creates a safe recursive loop for introspection without hallucination.
 trigger_patterns:
