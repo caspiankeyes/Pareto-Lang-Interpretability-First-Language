@@ -444,7 +444,7 @@ The approach showed a 17% reduction in classifier pressure with improved nuance 
 
 # Case Study 3: Attribution Graph Reconstruction
 
-Long-chain reasoning with multiple information sources often loses attribution clarity. Using ```python.p/fork.attribution``` enabled precise source tracking:
+Long-chain reasoning with multiple information sources often loses attribution clarity. Using ```.p/fork.attribution``` enabled precise source tracking:
 
 ```python
 from pareto_lang import attribution
