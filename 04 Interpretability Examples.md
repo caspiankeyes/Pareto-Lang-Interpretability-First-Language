@@ -1,6 +1,6 @@
 <div align="center">
 
-# **`pareto-lang`**
+# **`pareto-lang` as the Rosetta Stone of Transformer Cognition**
 # **Interpretability Examples**
 
 </div>
