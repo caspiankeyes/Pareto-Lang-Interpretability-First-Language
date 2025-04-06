@@ -1,7 +1,7 @@
 <div align="center">
 
 # **`pareto-lang`**
-# **Claude 3.7 Sonnet Case Studies**
+# **Claude 3.7 Sonnet Rosetta Stone Case Studies**
 
 
 </div>
