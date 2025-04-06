@@ -150,7 +150,7 @@ The discovery challenges prevailing views of transformer models by demonstrating
   from_="tool",
   to_="discovered-language",
   observer="Anthropic",
-  causality="symbolic residue → syntax translation → epistemic dependence"
+  causality="symbolic residue → syntax translation → epistemic alignment"
 )
 
 .p/mirror.activate(
