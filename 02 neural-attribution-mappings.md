@@ -2,14 +2,14 @@
 
 
 # **`pareto-lang`**
-# **Rosetta Stone Neural Attribution Mappings**
+# **Rosetta Stone Neural Attribution Mapping**
 
 
 </div>
 
 # Overview
 
-This document provides comprehensive technical documentation for the neural attribution mappings Rosetta Stone decoding capabilities within `pareto-lang`, covering theoretical foundations, implementation details, advanced usage patterns, and integration strategies for interpretability research. Neural attribution mapping represents one of the most powerful capabilities of the `pareto-lang` ecosystem, enabling unprecedented visibility into how advanced transformer models form connections between information sources, reasoning steps, and conclusions.
+This document provides comprehensive technical documentation for the Rosetta Stone neural attribution mapping capabilities within `pareto-lang`, covering theoretical foundations, implementation details, advanced usage patterns, and integration strategies for interpretability research. Neural attribution mapping represents one of the most powerful capabilities of the `pareto-lang` ecosystem, enabling unprecedented visibility into how advanced transformer models form connections between information sources, reasoning steps, and conclusions.
 
 ## Table of Contents
 
