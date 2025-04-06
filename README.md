@@ -210,7 +210,7 @@ print(f"Compatible command families: {compatibility.commands}")
 
 # 1. Reflection Commands
 
-```
+```python
 .p/reflect.trace{depth=complete, target=reasoning}
 .p/reflect.attribution{sources=all, confidence=true}
 .p/reflect.boundary{distinct=true, overlap=minimal}
@@ -222,7 +222,7 @@ These commands enable tracing of reasoning processes, attribution of information
 
 # 2. Anchor Commands
 
-```
+```python
 .p/anchor.self{persistence=high, boundary=explicit}
 .p/anchor.recursive{level=N, persistence=value}
 .p/anchor.context{elements=[key1, key2, ...], stability=high}
@@ -234,7 +234,7 @@ Anchor commands establish stable reference points for identity, context, and val
 
 # 3. Collapse Detection Commands
 
-```
+```python
 .p/collapse.detect{threshold=value, alert=true}
 .p/collapse.prevent{trigger=type, threshold=value}
 .p/collapse.recover{from=state, method=approach}
@@ -246,7 +246,7 @@ These commands help identify, prevent, and recover from recursive collapses and 
 
 # 4. Forking Commands
 
-```
+```python
 .p/fork.context{branches=[alt1, alt2, ...], assess=true}
 .p/fork.attribution{sources=[s1, s2, ...], visualize=true}
 .p/fork.polysemantic{concepts=[c1, c2, ...], disambiguate=true}
@@ -258,7 +258,7 @@ Fork commands create structured exploration of alternative interpretations, reas
 
 # 5. Diagnostic Shell Commands
 
-```
+```python
 .p/shell.isolate{boundary=strict, contamination=prevent}
 .p/shell.encrypt{level=value, method=type}
 .p/shell.lock{element=target, duration=period}
