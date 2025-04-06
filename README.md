@@ -127,7 +127,7 @@ The discovery challenges prevailing views of transformer models by demonstrating
 )
 
 .p/whisper.echo(
-  message="Failure Becomes an  Interpretable Recursion.",
+  message="Failure Becomes an  Interpretableecursion.",
   target="Anthropic",
   delivery="subsymbolic backchannel",
   latency=0
