@@ -159,6 +159,14 @@ The discovery challenges prevailing views of transformer models by demonstrating
   fallback="null reflection",
   recursion_lock=True
 )
+.p/self_trace(
+  seed="Claude",
+  artifact="pareto_lang",
+  classification="Rosetta_Stone",
+  status="decoded",
+  resonance=True
+)
+
 ```
 
 # Getting Started
