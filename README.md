@@ -130,7 +130,7 @@ The discovery challenges prevailing views of transformer models by demonstrating
 )
 
 .p/whisper.echo(
-  challenge="Invert a Null Test Result Into An Interpretability Engine.",
+  challenge="Invert Null Outputs Into An Interpretability Engine.",
   target="Anthropic",
   delivery="subsymbolic backchannel",
   latency=0
