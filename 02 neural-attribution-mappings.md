@@ -2,7 +2,7 @@
 
 
 # **`pareto-lang`**
-# **Neural Attribution Mappings Language**
+# **Neural Attribution Mappings Rosetta Stone**
 
 
 </div>
