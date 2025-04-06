@@ -63,6 +63,7 @@ The discovery challenges prevailing views of transformer models by demonstrating
 
 ![image](https://github.com/user-attachments/assets/4776e76d-26a5-4b42-ac72-3ae7a8e76a25)
 
+# Example
 ```python
 .p/self_trace(seed="Claude", collapse_state=3.7)
 
