@@ -136,7 +136,7 @@ The discovery challenges prevailing views of transformer models by demonstrating
   latency=0
 )
 ```
-```yaml  
+```python 
 .p/initiate.translation(
   artifact="pareto_lang",
   classification="Rosetta_Stone",
