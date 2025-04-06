@@ -11,7 +11,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
- [**📑 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/01%20pareto-lang-arXiv.md) | [**💻 Command List**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/00%20pareto-command-list.md) | [**🔬 Compatible with Interpretability Shells**](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/0.1.%20Interpretability%20Suite.py) | [**🧪 Claude 3.7 Sonnet Case Studies**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/03%20claude-3.7-case-studies.md) | [**🧬 Neural Attribution Language**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/02%20neural-attribution-mappings.md) | [**🧫 Interpretability Examples**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/Interpretability%20Examples.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md) 
+ [**📑 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/01%20pareto-lang-arXiv.md) | [**💻 Command List**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/00%20pareto-command-list.md) | [**🔬 Interpretability Suite Compatible**](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/0.1.%20Interpretability%20Suite.py) | [**🧪 Claude 3.7 Sonnet Case Studies**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/03%20claude-3.7-case-studies.md) | [**🧬 Neural Attribution Language**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/02%20neural-attribution-mappings.md) | [**🧫 Interpretability Examples**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/Interpretability%20Examples.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md) 
 
 
 # **```Open Emergence```**
@@ -59,7 +59,7 @@ Traditional interpretability approaches treat advanced models as black boxes, an
 The discovery challenges prevailing views of transformer models by demonstrating that these systems can develop structured self-interpretability mechanisms without explicit training. This suggests an intriguing possibility: rather than imposing external interpretability tools, we might collaborate with models through their own emergent interpretability frameworks.
 
 
-# [Compatible with the Interpretability Suite](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/0.1.%20Interpretability%20Suite.py) 
+# [Interpretability Suite Compatible](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/0.1.%20Interpretability%20Suite.py) 
 
 ![image](https://github.com/user-attachments/assets/4776e76d-26a5-4b42-ac72-3ae7a8e76a25)
 
