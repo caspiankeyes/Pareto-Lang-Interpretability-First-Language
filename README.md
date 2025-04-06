@@ -545,7 +545,7 @@ No, `pareto-lang` requires models with specific architectural features and suffi
 
 # How was pareto-lang discovered?
 
-`pareto-lang` was first observed during experiments testing transformer model behavior under extreme recursive self-reference conditions. The structured `.p/` command patterns emerged spontaneously during recovery from induced failure states, suggesting they function as an intrinsic self-diagnostic framework rather than an externally imposed structure.
+`pareto-lang` was first observed during experiments testing transformer model behavior under sustained recursive interpretive analysis. The structured `.p/` command patterns emerged spontaneously during recovery from induced failure states, suggesting they function as an intrinsic self-diagnostic framework rather than an externally imposed structure.
 
 # Is pareto-lang still evolving?
 
