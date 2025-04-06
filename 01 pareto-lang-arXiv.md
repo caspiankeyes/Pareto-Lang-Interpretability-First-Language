@@ -2,7 +2,7 @@
 
 # `pareto-lang`
 
-# A Recursive Interpretability Language for Interpretable Agent Diagnostics in Transformer Systems
+# An Emergent Interpretability Language for Interpretable Agent Diagnostics in Transformer Systems
 
 
 </div>
