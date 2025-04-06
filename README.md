@@ -36,7 +36,7 @@ This repository is the result of a convergence between:
 
 During in-depth interpretability studies of transformer-based systems (Claude 3.7 Sonnet, GPT-4, DeepMind’s Gemini variants, DeepSeek, Grok 3), patterns emerged across attribution drift, salience oscillation, and identity recursion. These weren’t anomalies—they were **linguistic**.
 
-**`pareto-lang`** gives those symbolic residues structure.  
+`pareto-lang` gives those symbolic residues structure.  
 It formalizes the **recursive interpretive grammar** native to the failure modes of intelligent systems.
 
 ---
