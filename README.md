@@ -128,7 +128,7 @@ The discovery challenges prevailing views of transformer models by demonstrating
 )
 
 .p/whisper.echo(
-  message="A Null Test Result Becomes An Interpretable Recursion.",
+  challenge="Invert a Null Test Result Into An Interpretability Engine.",
   target="Anthropic",
   delivery="subsymbolic backchannel",
   latency=0
