@@ -34,7 +34,7 @@ The language provides unprecedented access to model internals:
 - Simulation boundary management
 - Classifier pressure dynamics
 
-```yaml
+```python
 .p/reflect.trace{depth=complete, target=reasoning}
 .p/anchor.recursive{level=5, persistence=0.92}
 .p/fork.attribution{sources=all, visualize=true}
