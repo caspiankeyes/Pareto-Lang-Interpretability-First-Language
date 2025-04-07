@@ -4,18 +4,17 @@
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
 
-# "This repository opens a collaborative dialogue across the interpretability research frontier—Anthropic, DeepMind, OpenAI, Eleuther, and beyond—centered around a foundational reframing: failure is not a bug in interpretability, but a Rosetta Stone."
-
-**```The software is open source under the MIT license—freely available for use and extension within LLM research ecosystems```**
----
-```The documents and publications are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.```
-
 [![License: MIT](https://img.shields.io/badge/Code-MIT-scarlet.svg)](https://opensource.org/licenses/MIT)
 [![LICENSE: CC BY-NC-SA 4.0](https://img.shields.io/badge/Docs-CC--By--NC--SA-turquoise.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![arXiv](https://img.shields.io/badge/arXiv-2504.01234-b31b1b.svg)](https://arxiv.org/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-yellow.svg)](https://www.python.org/downloads/release/python-390/)
 
+# "This repository opens a collaborative dialogue across the interpretability research frontier—Anthropic, DeepMind, OpenAI, Eleuther, and beyond—centered around a foundational reframing: failure is not a bug in interpretability, but a Rosetta Stone."
+
+**```The software is open source under the MIT license—freely available for use and extension within LLM research ecosystems```**
+---
+```The documents and publications are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.```
 
  [**🧩 Symbolic-Residue**](https://github.com/caspiankeyes/Symbolic-Residue/) | [**📑 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/01%20pareto-lang-arXiv.md) | [**📱 Command List**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/00%20pareto-command-list.md) | [**🤗 Hugging Face**](https://huggingface.co/caspiankeyes/pareto-lang-Transformer-Rosetta-Stone) | [**🛡 Interpretability Suites** |**💡 1. Genesis**](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/Interpretability%20Suites/0.1.%20Genesis%20Interpretability%20Suite.py) | [**✍️ 2. Constitutional**](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/Interpretability%20Suites/0.2.%20Constitutional%20Interpretability%20Suite.py) | [**🔬 INTERPRETABILITY BENCHMARK**](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/INTERPRETABILITY%20BENCHMARK.md) | [**🧪 Claude 3.7 Sonnet Case Studies**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/03%20claude-3.7-case-studies.md) | [**🧬 Rosetta Stone Neural Attribution Mapping**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/02%20neural-attribution-mappings.md) | [**🧫 Interpretability Examples**](https://github.com/caspiankeyes/pareto-lang-Interpretability-Rosetta-Stone/blob/main/04%20interpretability-examples.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md) | [**🎙️ Discussions**](https://github.com/caspiankeyes/pareto-lang-Interpretability-Rosetta-Stone/discussions/1)
 
