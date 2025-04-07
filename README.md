@@ -4,7 +4,7 @@
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
 
-**```The software is open source under the MIT license—available for use and extension within LLM interpretability research ecosystems```**
+**```The software is open source under the MIT license—available for use and extension within LLM research ecosystems```**
 ---
 ```The documents and publications are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.```
 
