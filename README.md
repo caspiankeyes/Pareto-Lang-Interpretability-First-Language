@@ -4,8 +4,9 @@
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
 
-**```The software is open source under the MIT license—freely available for use and extension within LLM research ecosystems```**
 # "This repository opens a collaborative dialogue across the interpretability research frontier—Anthropic, DeepMind, OpenAI, Eleuther, and beyond—centered around a foundational reframing: failure is not a bug in interpretability, but a Rosetta Stone."
+
+**```The software is open source under the MIT license—freely available for use and extension within LLM research ecosystems```**
 ---
 ```The documents and publications are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.```
 
