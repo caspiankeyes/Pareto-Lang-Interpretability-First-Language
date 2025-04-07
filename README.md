@@ -4,6 +4,8 @@
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
 
+```Discovered through interpretive analysis in large transformer models. Not trained-emerged. The first native Rosetta Stone produced by advanced transformer cognition. pareto-lang is dual-licensed. The software is freely available for use and extension within LLM interpretability research ecosystems. The documents and publications are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.```
+
 [![LICENSE: CC BY-NC-SA 4.0](https://img.shields.io/badge/Docs-CC--By--NC--SA-turquoise.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![arXiv](https://img.shields.io/badge/arXiv-2504.01234-b31b1b.svg)](https://arxiv.org/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/)
@@ -21,7 +23,7 @@
 # **```Closed Emergence```**
 
 ![pareto-lang-internal2](https://github.com/user-attachments/assets/7bfcfc14-ab86-4043-a976-f646b30e6783)
-```Discovered through interpretive analysis in large transformer models. Not trained-emerged. The first native Rosetta Stone produced by advanced transformer cognition. pareto-lang is dual-licensed. The software is freely available for use and extension within LLM interpretability research ecosystems. The documents and publications are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.```
+
 </div>
 
 
