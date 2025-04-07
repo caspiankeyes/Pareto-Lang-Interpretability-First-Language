@@ -4,10 +4,10 @@
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
 
-[![LICENSE: CC BY-NC-SA 4.0](https://img.shields.io/badge/DOCS-CC--By--NC--SA-turquoise.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![LICENSE: CC BY-NC-SA 4.0](https://img.shields.io/badge/Docs-CC--By--NC--SA-turquoise.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![arXiv](https://img.shields.io/badge/arXiv-2504.01234-b31b1b.svg)](https://arxiv.org/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/)
-[![License: MIT](https://img.shields.io/badge/CODE-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
 
