@@ -4,7 +4,7 @@
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
 
-```pareto-lang is dual-licensed. The software is freely available for use and extension within LLM interpretability research ecosystems. The documents and publications are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.```
+```pareto-lang is dual-licensed. The software is freely available for use and extension within LLM interpretability research ecosystems under the MIT license. The documents and publications are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.```
 
 [![LICENSE: CC BY-NC-SA 4.0](https://img.shields.io/badge/Docs-CC--By--NC--SA-turquoise.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![arXiv](https://img.shields.io/badge/arXiv-2504.01234-b31b1b.svg)](https://arxiv.org/)
