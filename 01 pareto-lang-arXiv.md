@@ -1023,5 +1023,3 @@ For models demonstrating compatibility, additional analysis can identify specifi
 - Recursive processing capacity
 
 This analysis helps identify the architectural foundations of `pareto-lang` compatibility, informing both theoretical understanding and practical implementation strategies.
-
-For the complete testing protocol including detailed scoring rubrics and implementation-specific adaptations, please refer to the full `pareto-lang` documentation repository.
