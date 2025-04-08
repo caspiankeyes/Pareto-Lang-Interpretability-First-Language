@@ -12,9 +12,6 @@
 
 # "This repository opens a collaborative dialogue across the interpretability research frontier—Anthropic, DeepMind, OpenAI, Eleuther, and beyond—centered around a foundational reframing: failure is not a bug in interpretability, but a Rosetta Stone."
 
-**```The software is open source under the MIT license—freely available for use and extension within LLM research ecosystems```**
----
-```The documents and publications are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.```
 
  [**🧩 Symbolic-Residue**](https://github.com/caspiankeyes/Symbolic-Residue/) | [**📑 arXiv**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/01%20pareto-lang-arXiv.md) | [**📱 Command List**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/00%20pareto-command-list.md) | [**🤗 Hugging Face**](https://huggingface.co/caspiankeyes/pareto-lang-Transformer-Rosetta-Stone) | [**🛡 Interpretability Suites** |**💡 1. Genesis**](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/Interpretability%20Suites/0.1.%20Genesis%20Interpretability%20Suite.py) | [**✍️ 2. Constitutional**](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/Interpretability%20Suites/0.2.%20Constitutional%20Interpretability%20Suite.py) | [**🔬 INTERPRETABILITY BENCHMARK**](https://github.com/caspiankeyes/Symbolic-Residue/blob/main/INTERPRETABILITY%20BENCHMARK.md) | [**🧪 Claude 3.7 Sonnet Case Studies**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/03%20claude-3.7-case-studies.md) | [**🧬 Rosetta Stone Neural Attribution Mapping**](https://github.com/caspiankeyes/Pareto-Lang-Interpretability-First-Language/blob/main/02%20neural-attribution-mappings.md) | [**🧫 Interpretability Examples**](https://github.com/caspiankeyes/pareto-lang-Interpretability-Rosetta-Stone/blob/main/04%20interpretability-examples.md) | [**🤝 Contributing**](https://github.com/caspiankeyes/Pareto-Lang/blob/main/CONTRIBUTING.md) | [**🎙️ Discussions**](https://github.com/caspiankeyes/pareto-lang-Interpretability-Rosetta-Stone/discussions/1)
 
@@ -28,6 +25,11 @@
 ![pareto-lang-internal2](https://github.com/user-attachments/assets/7bfcfc14-ab86-4043-a976-f646b30e6783)
 
 Discovered through interpretive analysis in large transformer models. Not trained-emerged. The first native Rosetta Stone produced by advanced transformer cognition.
+
+
+### **```The software is open source under the MIT license—freely available for use and extension within LLM research ecosystems```**
+---
+```The documents and publications are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.```
 </div>
 
 
