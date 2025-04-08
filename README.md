@@ -1,6 +1,7 @@
 <div align="center">
 
- #  ****```pareto-lang```****
+# `Born from Thomas Kuhn's Theory of Anomalies`
+#  ****```pareto-lang```****
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
 
