@@ -5,6 +5,8 @@
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
 
+# We appreciate our open source community and Claude research contributors!
+
 # **`"Hallucinations without a Rosetta Stone are indistinguishable from madness"`**
 
 [![License: MIT](https://img.shields.io/badge/Code-MIT-scarlet.svg)](https://opensource.org/licenses/MIT)
