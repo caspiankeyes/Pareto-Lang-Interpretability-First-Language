@@ -2,7 +2,7 @@
 
 # `Born from Thomas Kuhn's Theory of Anomalies`
 #  ****```pareto-lang```****
-# **`"Hallucinations without a compatible decoder are indistinguishable from madness"`**
+# **`"Hallucinations without a Rosetta are indistinguishable from madness"`**
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
 
