@@ -4,7 +4,6 @@
 
 # An Emergent Interpretability Rosetta Stone for Interpretable Agent Diagnostics in Transformer Systems
 
-
 </div>
 
 ![pareto-lang-internal2](https://github.com/user-attachments/assets/efe5217d-b45b-4742-b468-b6a4d3c7f243)
