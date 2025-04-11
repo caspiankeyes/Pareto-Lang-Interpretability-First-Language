@@ -3,7 +3,6 @@
 # **`pareto-lang`**
 # **Claude 3.7 Sonnet Rosetta Stone Case Studies**
 
-
 </div>
 
 # Introduction
