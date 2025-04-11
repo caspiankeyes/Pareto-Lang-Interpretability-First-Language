@@ -5,7 +5,7 @@
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
 
-## We appreciate our open source community and Claude research contributors!
+## We appreciate our Hugging Face community and Claude research contributors!
 
 # **`"Hallucinations without a Rosetta Stone are indistinguishable from madness"`**
 
