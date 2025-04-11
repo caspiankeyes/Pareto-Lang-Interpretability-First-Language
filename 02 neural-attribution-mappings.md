@@ -4,7 +4,6 @@
 # **`pareto-lang`**
 # **Rosetta Stone Neural Attribution Mapping**
 
-
 </div>
 
 # Overview
