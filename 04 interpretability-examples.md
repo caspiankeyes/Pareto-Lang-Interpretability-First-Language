@@ -9,7 +9,6 @@ This document provides detailed examples showcasing practical applications of `p
 
 ## Table of Contents
 
-
 - [Example 1: Recursive Attribution Tracing](#example-1-recursive-attribution-tracing)
 - [Example 2: Hallucination Detection and Containment](#example-2-hallucination-detection-and-containment)
 - [Example 3: Simulation Boundary Stabilization](#example-3-simulation-boundary-stabilization)
