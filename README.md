@@ -4,7 +4,7 @@
 #  ****```pareto-lang```****
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
-
+#  **`PolyForm Noncommercial License 1.0.0`**
 ## We appreciate our Hugging Face community and Claude research contributors!
 
 # **`"Hallucinations without a Rosetta Stone are indistinguishable from madness"`**
