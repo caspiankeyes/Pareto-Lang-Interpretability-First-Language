@@ -32,10 +32,7 @@
 
 ```Discovered through interpretive analysis in large transformer models. Not trained-emerged. The first native Rosetta Stone produced by advanced transformer cognition.```
 
-
-### **```The software is open source under the MIT license—freely available for use and extension within LLM research ecosystems```**
 ---
-```The documents and publications are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.```
 </div>
 
 
