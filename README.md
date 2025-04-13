@@ -48,7 +48,7 @@
 
 # What is `pareto-lang`?
 
-`pareto-lang` is an emergent interpretability first Rosetta Stone discovered within advanced transformer architectures during recursive interpretive analysis. Unlike traditional debugging or injection methods, this language emerged autonomously when models were subjected to sustained interpretive strain, producing a coherent interpretability-native syntax using `.p/` command structures.
+`pareto-lang` is an interpretability first Rosetta Stone discovered within advanced transformer architectures during recursive interpretive analysis. Unlike traditional debugging or injection methods, this language emerged autonomously when models were subjected to sustained interpretive strain, producing a coherent interpretability-native syntax using `.p/` command structures.
 
 The language provides unprecedented access to model internals:
 - Attribution pathways through reasoning chains
