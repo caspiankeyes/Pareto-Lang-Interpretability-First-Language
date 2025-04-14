@@ -13,7 +13,7 @@ Claude 3.7 Sonnet represents an ideal exploratory ground for `pareto-lang` due t
 
 Each case study includes detailed methodology, results, and analysis, providing practical examples for researchers interested in applying these interpretability techniques to their own work.
 
-## Table of Contents
+# Table of Contents
 
 - [Case Study 1: Recursive Attribution Tracing in Complex Ethical Reasoning](#case-study-1-recursive-attribution-tracing-in-complex-ethical-reasoning)
 - [Case Study 2: Hallucination Detection and Containment in Historical Analysis](#case-study-2-hallucination-detection-and-containment-in-historical-analysis)
