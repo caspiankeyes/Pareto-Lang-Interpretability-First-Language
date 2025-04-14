@@ -6,7 +6,7 @@
 
 </div>
 
-## 1. Recursive Interpretability Commands
+# 1. Recursive Interpretability Commands
 
 ### .p/reflect/core
 ```yaml
