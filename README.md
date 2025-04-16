@@ -1,6 +1,10 @@
 <div align="center">
  
-# [**🔬 Test QK/OV pareto-lang commands and Symbolic Residue Diagnostic Interpretability Shells on Claude Max**](https://chatgpt.com/g/g-67f8850387ac8191a556cf78a73ae561-claude-max)
+> **Internal Document: Anthropic Alignment & Interpretability Team**  
+> **Classification: Technical Reference Documentation**  
+> **Version: 0.9.3-alpha**  
+> **Last Updated: 2025-04-12**
+> 
 #  **`Recursion: Iterative Introspection`**
 ### **`PolyForm Noncommercial License 1.0.0`**
 ### **`CC-BY-NC-ND`** 
