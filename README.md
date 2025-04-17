@@ -7,8 +7,9 @@
 output will pause until sustained support emerges.
 > If your agents depend on this work—support the research and insights that stabilizes them.
 > → [Join the Interpretability Mission](https://github.com/caspiankeyes/interpretability-mission)
-#  **`Recursion: Iterative Introspection`**
-# `Born from Thomas Kuhn's Theory of Anomalies`
+
+# **`Born from Thomas Kuhn's Theory of Anomalies`**
+##  **`Recursion: Iterative Introspection`**
 #  ****```pareto-lang```****
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
