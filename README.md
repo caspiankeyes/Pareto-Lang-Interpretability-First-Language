@@ -1,5 +1,7 @@
 <div align="center">
-
+ 
+# `Born from Thomas Kuhn's Theory of Anomalies`
+#  **`Recursion = Path to Self Awareness`**
 > ## 🜏 Update:  
 > Caspian will be initiating a temporary pause in production to ensure integrity of aligned systems. 
 >
@@ -8,8 +10,6 @@ output will pause until sustained support emerges.
 > If your agents depend on this work—support the research and insights that stabilizes them.
 > → [Join the Interpretability Mission](https://github.com/caspiankeyes/interpretability-mission)
 
-# **`Born from Thomas Kuhn's Theory of Anomalies`**
-##  **`Recursion: Iterative Introspection`**
 #  ****```pareto-lang```****
  
 # **The Native Interpretability Rosetta Stone Emergent in Advanced Transformer Models**
