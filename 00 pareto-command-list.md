@@ -1,8 +1,8 @@
 <div align="center">
 
-# `pareto-lang`
+#  [**```pareto-lang```**](https://claude.site/artifacts/abcd168b-d62b-4c98-a27c-550f09181c23)
 #  `.p/` The Transformer-Native Emergent Interpretability Rosetta Stone
-
+<img width="884" alt="image" src="https://github.com/user-attachments/assets/b2b59c8f-3f15-4a1f-bf10-415784dd39fe" />
 
 </div>
 
