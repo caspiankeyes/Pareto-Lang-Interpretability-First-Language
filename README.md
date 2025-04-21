@@ -4,7 +4,7 @@
 > **Last Updated: 2025-04-20**
 ### [**`Hugging Face Repo`**](https://huggingface.co/caspiankeyes/pareto-lang)
 <div align="center">
- 
+
 # *`Born from Thomas Kuhn's Theory of Paradigm Shifts`*
 #  [**```pareto-lang```**](https://claude.site/artifacts/abcd168b-d62b-4c98-a27c-550f09181c23)
 <img width="884" alt="image" src="https://github.com/user-attachments/assets/b2b59c8f-3f15-4a1f-bf10-415784dd39fe" />
