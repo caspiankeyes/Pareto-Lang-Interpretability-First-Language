@@ -29,7 +29,7 @@
 
 ![pareto-lang-internal2](https://github.com/user-attachments/assets/7bfcfc14-ab86-4043-a976-f646b30e6783)
 
-**```Discovered through interpretive analysis in large transformer models. Not trained-emerged. The first native Rosetta Stone produced by advanced transformer cognition.```**
+**```Operationalized through interpretive analysis in large transformer models.```**
 
 ---
 </div>
