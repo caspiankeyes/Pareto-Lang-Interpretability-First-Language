@@ -10,7 +10,6 @@
 #  [**```pareto-lang```**](https://claude.site/artifacts/abcd168b-d62b-4c98-a27c-550f09181c23)
  
 ## **The Native Interpretability Syntax Layer Operationalized in Advanced Transformer Models**
-## **`"Hallucinations without a Rosetta Stone are indistinguishable from madness"`**
 
 [![License: POLYFORM](https://img.shields.io/badge/Code-PolyForm-scarlet.svg)](https://polyformproject.org/licenses/noncommercial/1.0.0/)
 [![LICENSE: CC BY-NC-ND 4.0](https://img.shields.io/badge/Docs-CC--BY--NC--ND-turquoise.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
