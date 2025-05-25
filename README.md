@@ -1,6 +1,6 @@
 
 
-### [**`Hugging Face Repo`**](https://huggingface.co/caspiankeyes/pareto-lang)
+### [**`Hugging Face Repo`**](https://huggingface.co/recursivelabsai/pareto-lang)
 <div align="center">
 
 # *Born from Thomas Kuhn's Theory of Paradigm Shifts*
