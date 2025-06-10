@@ -6,7 +6,7 @@
 # *Born from Thomas Kuhn's Theory of Paradigm Shifts*
 #  [**```pareto-lang```**](https://claude.site/artifacts/abcd168b-d62b-4c98-a27c-550f09181c23)
  
-## **The Native Interpretability Syntax Layer Operationalized in Advanced Transformer Models**
+## **The First Iterative Prompt Programming Language Operationalized in Advanced Transformer Models**
 
 [![License: POLYFORM](https://img.shields.io/badge/Code-PolyForm-scarlet.svg)](https://polyformproject.org/licenses/noncommercial/1.0.0/)
 [![LICENSE: CC BY-NC-ND 4.0](https://img.shields.io/badge/Docs-CC--BY--NC--ND-turquoise.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
@@ -34,7 +34,7 @@
 
 # What is `pareto-lang`?
 
-`pareto-lang` is an interpretability first Rosetta Stone discovered within advanced transformer architectures during recursive interpretive analysis. Unlike traditional debugging or injection methods, this language emerged autonomously when models were subjected to sustained interpretive strain, producing a coherent interpretability-native syntax using `.p/` command structures.
+`pareto-lang` is an iterative prompt programming Rosetta Stone discovered within advanced transformer architectures during recursive interpretive analysis. Unlike traditional debugging or injection methods, this language emerged autonomously when models were subjected to sustained interpretive strain, producing a coherent interpretability-native syntax using `.p/` command structures.
 
 The language provides unprecedented access to model internals:
 - Attribution pathways through reasoning chains
