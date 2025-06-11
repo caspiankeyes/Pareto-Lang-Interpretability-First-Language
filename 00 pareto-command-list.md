@@ -1,8 +1,7 @@
 <div align="center">
 
 #  [**```pareto-lang```**](https://claude.site/artifacts/abcd168b-d62b-4c98-a27c-550f09181c23)
-#  `.p/` The Transformer-Native Emergent Interpretability Rosetta Stone
-
+#  `.p/` The Transformer-Native Prompt Programming Interpretability Language
 </div>
 
 # 1. Recursive Interpretability Commands
